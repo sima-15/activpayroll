@@ -1,0 +1,47 @@
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let data of dataList">
+    <div class="flex mr-b-22">
+      <div>{{data.heading}}</div>
+      <div class="count-circle">{{data.counts}}</div>
+    </div>
+    <div class="inner-box mr-b-22" *ngFor="let list of data.data">
+      <p class="inner-box_p m-b-0 m-t-5">{{list.heading}}</p>
+      <p class="m-b-0 text-align-left font-size-15">{{list.name}}</p>
+      <div class="flex">
+        
+        <p class="m-t-5 text-align-left font-size-15" *ngIf="data.heading != 'Due today'" >{{list.date}}</p>
+        <ng-container *ngIf=" data.heading == 'Due today'" >
+            <ng-container *ngIf=" list.date == '18th Apr'">
+                <p class="m-t-5 text-align-left font-size-15" style="color: red;">{{list.date}}</p>
+            </ng-container>           
+        </ng-container>
+        <p class="font-size-15 not-ready-txt p-l-12 p-r-12 p-t-3 p-b-3 m-t-5" *ngIf="list.status != '1 day overdue'">{{list.status}}</p>
+        <ng-container *ngIf="data.heading == 'Due today'" >
+            <ng-container *ngIf="list.status == '1 day overdue'">
+                <p class="font-size-15 not-ready-txt p-l-12 p-r-12 p-t-3 p-b-3 m-t-5" style="color: maroon;font-weight: 600;background-color: #f6cccc;border: none;">{{list.status}}</p>
+            </ng-container>           
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="grid-item">
+    <div class="flex">
+      <div>Upcoming</div>
+      <div class="count-circle">2</div>
+    </div>
+    <div class="inner-box">
+      <p class="inner-box_p">Sign off payroll authorisation form</p>
+    </div>
+    <div>world</div>
+  </div>
+  <div class="grid-item">
+    <div class="flex">
+      <div>Upcoming</div>
+      <div class="count-circle">2</div>
+    </div>
+    <div class="inner-box">
+      <p class="inner-box_p">Sign off payroll authorisation form</p>
+    </div>
+    <div>world</div>
+  </div> -->
+</div>
