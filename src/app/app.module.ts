@@ -7,18 +7,26 @@ import { ActpayUpcomingComponent } from './actpay-upcoming/actpay-upcoming.compo
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component'
+import { SchedulerComponent } from './scheduler/scheduler.component';
+import { SchedulerModule } from '@progress/kendo-angular-scheduler';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ActpayUpcomingComponent,
-    HomeComponent
+    HomeComponent,
+    SchedulerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    SchedulerModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
