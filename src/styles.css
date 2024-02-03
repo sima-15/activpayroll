@@ -1,1 +1,144 @@
 /* You can add global styles to this file, and also import other style files */
+html, body { 
+  height: 100%; 
+}
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: #f8f5f5;
+}
+
+.grid-container {
+    display: flex;
+    flex-flow: row;
+    
+    grid-column-gap: 15px;
+    padding: 10px;
+  }
+  .grid-container > * {
+    flex: 1 100%;
+  }
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+  @media (max-width: 800px) {
+    .grid-container {
+      flex-direction: column;
+    }
+    /* .grid-item{
+      flex: 3;
+    } */
+  }
+  .grid-item {
+    background-color: #f3f0f0;
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .flex{
+    display: flex;
+    place-content: space-between;
+  }
+  .count-circle{
+    width: 20px;
+    height: 20px;
+    background-color: #d3d0d0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0606a1;
+    border-radius: 3px;
+  }
+  .inner-box{
+    background-color: white;
+    padding: 20px;
+    /* text-align: left;
+    font-size: 20px;
+    font-weight: 600; */
+  }
+  .inner-box_p{
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .m-b-0{
+    margin-bottom: 0px;
+  }
+  .m-t-0{
+    margin-top: 0px;
+  }
+  .m-l-0{
+    margin-left: 0px !important;
+  }
+  .m-r-0{
+    margin-right: 0px !important;
+  }
+  .text-align-center{
+    text-align: center;
+  }
+  .text-align-left{
+    text-align: left;
+  }
+.font-size-15{
+    font-size: 15px;
+}
+.font-size-17{
+  font-size: 17px;
+}
+.font-size-12{
+  font-size: 12px;
+}
+.not-ready-txt{
+    border: 1px solid darkgrey;
+    background-color: lightgray;
+    border-radius: 12px;
+    /* margin-left: 23px; */
+    /* width: 90px; */
+}
+.mr-b-22{
+    margin-bottom: 22px !important;
+}
+.mr-t-22{
+  margin-top: 22px !important;
+}
+.m-t-5{
+  margin-top: 5px !important;
+}
+.m-b-5{
+  margin-bottom: 5px !important;
+}
+.m-r-5{
+    margin-right: 5px;
+}
+.p-l-12{
+  padding-left: 12px;
+}
+.p-r-12{
+  padding-right: 12px;
+}
+.p-t-3{
+  padding-top: 2px;
+}
+.p-b-3{
+  padding-bottom: 2px;
+}
+
+
+/* material style */
+.mat-mdc-tab-header {
+  border-bottom: 1px solid rgba(0,0,0,.12) !important;
+}
+.mat-mdc-tab.mdc-tab {
+  flex-grow: 0 !important;
+}
+.primary-btn{
+  background-color: orangered !important;
+  color: white !important;
+}
+.secondary-btn{
+  color: orangered !important;
+}
+.mat-expansion-indicator::after{
+  color: orangered !important;
+}
+.mat-elevation-z8, .mat-mdc-elevation-specific.mat-elevation-z8{
+  box-shadow: none !important;
+}
