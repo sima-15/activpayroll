@@ -4,6 +4,20 @@ import { SchedulerEvent } from '@progress/kendo-angular-scheduler';
 
 const baseData: any[] = [
     {
+        "TaskID": 200,
+        "OwnerID": 2,
+        "Title": "Review",
+        "Description": "",
+        "StartTimezone": null,
+        "Start": "2024-02-05T13:30:00.000Z",
+        "End": "2024-02-05T40:00:00.000Z",
+        "EndTimezone": null,
+        "RecurrenceRule": "FREQ=WEEKLY;BYDAY=MO,WE",
+        "RecurrenceID": null,
+        "RecurrenceException": null,
+        "IsAllDay": false
+    },
+    {
         "TaskID": 4,
         "OwnerID": 2,
         "Title": "Bowling tournament",
@@ -91,7 +105,7 @@ const baseData: any[] = [
         "TaskID": 14,
         "OwnerID": 3,
         "RoomID": 2,
-        "Title": "Replace the printer on the 1st floor",
+        "Title": "Payment",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-24T10:00:00.000Z",
@@ -372,7 +386,7 @@ const baseData: any[] = [
         "TaskID": 68,
         "OwnerID": 1,
         "RoomID": 2,
-        "Title": "Breakfast with Tom",
+        "Title": "Review",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-24T08:30:00.000Z",
@@ -792,7 +806,9 @@ const randomInt = (): number => {
     return Math.random();
 }
 
-export const displayDate = new Date();
+//export const displayDate = new Date();
+
+export const displayDate = new Date(currentYear, 5, 24);
 
 export const sampleData = baseData.map(dataItem => (
     <SchedulerEvent> {
