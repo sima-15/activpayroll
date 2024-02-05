@@ -1,0 +1,36 @@
+<!-- <kendo-scheduler [kendoSchedulerBinding]="events"
+                [selectedDate]="selectedDate"
+                title="abc"
+                dataItem="dsfsdf" 
+                description="dffffffffffffff"
+                startTime="07:00" endTime="19:00"
+                style="height: 400px;">
+    <kendo-scheduler-timeline-view>
+    </kendo-scheduler-timeline-view>
+
+    <kendo-scheduler-timeline-week-view>
+    </kendo-scheduler-timeline-week-view>
+
+    <kendo-scheduler-timeline-month-view>
+    </kendo-scheduler-timeline-month-view>
+</kendo-scheduler> -->
+
+<kendo-scheduler
+      [kendoSchedulerBinding]="events"
+      [selectedDate]="selectedDate"
+    >
+      <ng-template kendoSchedulerAllDayEventTemplate let-event="event">
+        <span style="color:yellow;">{{ event.title }}</span>
+      </ng-template>
+      <kendo-scheduler-week-view> </kendo-scheduler-week-view>
+    </kendo-scheduler>
+
+<!-- <kendo-scheduler [kendoSchedulerBinding]="events"
+                         [selectedDate]="selectedDate" [selectedViewIndex]="1"
+                         style="height: 650px;">
+            <kendo-scheduler-day-view startTime="07:00">
+            </kendo-scheduler-day-view>
+
+            <kendo-scheduler-month-view [eventHeight]="30">
+            </kendo-scheduler-month-view>
+        </kendo-scheduler> -->

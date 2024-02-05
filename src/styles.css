@@ -108,6 +108,9 @@ body {
 .m-r-5{
     margin-right: 5px;
 }
+.m-l-5{
+  margin-left: 5px;
+}
 .p-l-12{
   padding-left: 12px;
 }
@@ -140,5 +143,18 @@ body {
   color: orangered !important;
 }
 .mat-elevation-z8, .mat-mdc-elevation-specific.mat-elevation-z8{
+  /* box-shadow: none !important; */
+}
+.mat-mdc-table{
   box-shadow: none !important;
+}
+.btn-rm-marging{
+  margin: 18px 0px !important;
+}
+.mat-expansion-indicator{
+  width: 25px !important;
+  height: 25px !important;
+  text-align: center !important;
+  background-color: antiquewhite !important;
+  
 }

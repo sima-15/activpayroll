@@ -1,6 +1,22 @@
 <mat-tab-group>
   <mat-tab label="Overview">
-    <p class="mr-t-22 mr-b-22"><b>Customers</b></p>
+    <div class="flex mr-t-22 mr-b-22">
+      <p><b>Customers</b></p>
+      <div>
+        <button mat-button color="warn">Clear Filter</button>
+        <button mat-stroked-button (click)="myButton()" class="m-l-0">
+          <mat-icon>filter_alt</mat-icon> Filter(1)
+        </button>
+        <label class="m-l-5">Sort By:</label>
+        <mat-form-field appearance="outline">
+          <mat-select [value]="selectedOption">
+            <mat-option value="Most Relevant">Most Relevant</mat-option>
+            <mat-option value="Relevant">Relevant</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    
     <mat-accordion class="example-headers-align" multi>
       <mat-expansion-panel expanded="true">
         <mat-expansion-panel-header>
@@ -36,7 +52,6 @@
             </div>
           </div>
         </mat-expansion-panel-header>
-
         <div>
             <app-payroll-details-table></app-payroll-details-table>
         </div>
@@ -45,16 +60,3 @@
   </mat-tab>
   <mat-tab label="Profile timeline"> Large content </mat-tab>
 </mat-tab-group>
-
-<!-- <mat-tab-group dynamicHeight>
-      <mat-tab label="Short tab">
-        <div class="example-small-box mat-elevation-z4">
-          Small content
-        </div>
-      </mat-tab>
-      <mat-tab label="Long tab">
-        <div class="example-large-box mat-elevation-z4">
-          Large content
-        </div>
-      </mat-tab>
-    </mat-tab-group> -->

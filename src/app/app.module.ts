@@ -10,6 +10,12 @@ import { HomeComponent } from './home/home.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { MaterialModule } from './material.module';
 import { PayrollDetailsTableComponent } from './payroll-details-table/payroll-details-table.component';
+import { SchedulerComponent } from './scheduler/scheduler.component';
+import { SchedulerModule } from '@progress/kendo-angular-scheduler';
+import { DialogBoxComponent } from './shared/dialog-box/dialog-box.component';
+import { CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
+
+
 
 @NgModule({
   declarations: [
@@ -17,7 +23,9 @@ import { PayrollDetailsTableComponent } from './payroll-details-table/payroll-de
     ActpayUpcomingComponent,
     HomeComponent,
     PayrollComponent,
-    PayrollDetailsTableComponent
+    PayrollDetailsTableComponent,
+    SchedulerComponent,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,10 @@ import { PayrollDetailsTableComponent } from './payroll-details-table/payroll-de
     AppRoutingModule,
     CommonModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    SchedulerModule,
+    CdkDropList, 
+    CdkDrag
   ],
   providers: [],
   bootstrap: [AppComponent]
