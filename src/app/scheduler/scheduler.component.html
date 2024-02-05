@@ -17,12 +17,14 @@
 
 <kendo-scheduler
       [kendoSchedulerBinding]="events"
-      [selectedDate]="selectedDate"
+      [selectedDate]="selectedDate"  [group]="group" [resources]="resources"
     >
-      <ng-template kendoSchedulerAllDayEventTemplate let-event="event">
+      <!-- <ng-template kendoSchedulerAllDayEventTemplate let-event="event">
         <span style="color:yellow;">{{ event.title }}</span>
-      </ng-template>
-      <kendo-scheduler-week-view> </kendo-scheduler-week-view>
+      </ng-template> -->
+      <!-- <kendo-scheduler-week-view> </kendo-scheduler-week-view> -->
+      <kendo-scheduler-timeline-view>
+      </kendo-scheduler-timeline-view>
     </kendo-scheduler>
 
 <!-- <kendo-scheduler [kendoSchedulerBinding]="events"
