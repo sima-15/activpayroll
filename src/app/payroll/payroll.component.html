@@ -1,14 +1,15 @@
 <mat-tab-group>
   <mat-tab label="Overview">
-    <div class="flex mr-t-22 mr-b-22">
-      <p><b>Customers</b></p>
+    <div class="flex mr-t-22">
+      <div class="mr-t-22"><b>Customers</b></div>
       <div>
         <button mat-button color="warn">Clear Filter</button>
         <button mat-stroked-button (click)="myButton()" class="m-l-0">
           <mat-icon>filter_alt</mat-icon> Filter(1)
         </button>
-        <label class="m-l-5">Sort By:</label>
+       
         <mat-form-field appearance="outline">
+          <span class="dropdown-heading">Sort By:</span>
           <mat-select [value]="selectedOption">
             <mat-option value="Most Relevant">Most Relevant</mat-option>
             <mat-option value="Relevant">Relevant</mat-option>
@@ -18,13 +19,89 @@
     </div>
     
     <mat-accordion class="example-headers-align" multi>
-      <mat-expansion-panel expanded="true">
+      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
         <mat-expansion-panel-header>
           <div class="my-panel" (click)="$event.stopPropagation()">
             <h2 class="mr-t-22">
               <b>Hooli</b> <span class="p-l-12 font-size-15">6 Payrolls</span>
             </h2>
-            <div>
+            <div class="task-button-group">
+              <button
+                mat-stroked-button
+                (click)="myButton()"
+                class="primary-btn"
+              >
+                <mat-icon>warning</mat-icon>2 critical tasks
+              </button>
+              <button
+                mat-stroked-button
+                (click)="myButton()"
+                class="secondary-btn"
+              >
+                <mat-icon>warning</mat-icon> 3 tasks overdue
+              </button>
+              <button mat-stroked-button (click)="myButton()" class="m-l-0">
+                <mat-icon>shoping bag</mat-icon> 6 tasks due today
+              </button>
+              <button
+                mat-stroked-button
+                (click)="myButton()"
+                class="secondary-btn m-l-0"
+              >
+                <mat-icon>message</mat-icon> 1 query updates
+              </button>
+            </div>
+          </div>
+        </mat-expansion-panel-header>
+        <div>
+            <app-payroll-details-table></app-payroll-details-table>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+        <mat-expansion-panel-header>
+          <div class="my-panel" (click)="$event.stopPropagation()">
+            <h2 class="mr-t-22">
+              <b>Hooli</b> <span class="p-l-12 font-size-15">6 Payrolls</span>
+            </h2>
+            <div class="task-button-group">
+              <button
+                mat-stroked-button
+                (click)="myButton()"
+                class="primary-btn"
+              >
+                <mat-icon>warning</mat-icon>2 critical tasks
+              </button>
+              <button
+                mat-stroked-button
+                (click)="myButton()"
+                class="secondary-btn"
+              >
+                <mat-icon>warning</mat-icon> 3 tasks overdue
+              </button>
+              <button mat-stroked-button (click)="myButton()" class="m-l-0">
+                <mat-icon>shoping bag</mat-icon> 6 tasks due today
+              </button>
+              <button
+                mat-stroked-button
+                (click)="myButton()"
+                class="secondary-btn m-l-0"
+              >
+                <mat-icon>message</mat-icon> 1 query updates
+              </button>
+            </div>
+          </div>
+        </mat-expansion-panel-header>
+        <div>
+            <app-payroll-details-table></app-payroll-details-table>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)">
+        <mat-expansion-panel-header>
+          <div class="my-panel" (click)="$event.stopPropagation()">
+            <h2 class="mr-t-22">
+              <b>Hooli</b> <span class="p-l-12 font-size-15">6 Payrolls</span>
+            </h2>
+            <div class="task-button-group">
               <button
                 mat-stroked-button
                 (click)="myButton()"

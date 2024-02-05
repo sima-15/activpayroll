@@ -158,3 +158,47 @@ body {
   background-color: antiquewhite !important;
   
 }
+
+
+/* dropdown style css start*/
+.mat-mdc-text-field-wrapper .mdc-notched-outline{
+  height: 66%!important;
+  top: 10px!important;
+}
+
+.mdc-button--outlined{
+  margin-right: 12px!important;
+}
+
+.dropdown-heading{
+  text-wrap: nowrap!important;
+  padding-right: 4px!important;
+  font-weight: 500!important;
+  font-size: 13px!important;
+}
+
+.mat-mdc-form-field-infix{
+  display: inline-flex!important;
+}
+
+.mat-mdc-select-value-text{
+  font-size: 13px!important;
+}
+
+.mat-mdc-select-arrow svg{
+  color: #FC6C00!important;
+}
+
+/* dropdown style css end*/
+
+.task-button-group .mdc-button:first-child{
+  margin: 18px 10px !important;
+}
+
+.task-button-group .mdc-button:last-child{
+  margin: 18px 18px 18px 0px!important
+}
+
+.task-button-group .mdc-button{
+  margin: 18px 0px !important;
+}

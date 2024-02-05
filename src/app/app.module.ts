@@ -14,6 +14,7 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
 import { SchedulerModule } from '@progress/kendo-angular-scheduler';
 import { DialogBoxComponent } from './shared/dialog-box/dialog-box.component';
 import { CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
+import { GenericTableComponent } from './shared/generic-table/generic-table.component';
 
 
 
@@ -25,7 +26,8 @@ import { CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
     PayrollComponent,
     PayrollDetailsTableComponent,
     SchedulerComponent,
-    DialogBoxComponent
+    DialogBoxComponent,
+    GenericTableComponent
   ],
   imports: [
     BrowserModule,

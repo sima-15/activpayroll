@@ -34,14 +34,24 @@
     display: flex;
     justify-content: space-between;
   } 
-  .my-panel button {
+  /* .my-panel button {
       margin: 15px 25px;
-    } 
+    }  */
 .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover{
     background-color: white;
 }
-.my-panel button{
+/* .my-panel button{
     margin: 18px 10px !important;
+} */
+.mat-select-panel {
+  max-height: 95vh !important;
+}
+.mat-mdc-text-field-wrapper{
+  width: 60% !important;
+}
+
+.mdc-notched-outline{
+  height: 66%!important;
 }
 
   
