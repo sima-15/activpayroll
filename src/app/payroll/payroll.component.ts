@@ -9,8 +9,13 @@ import { MatAccordion } from '@angular/material/expansion';
 export class PayrollComponent {
   @ViewChild(MatAccordion)
   accordion!: MatAccordion;
-  selectedOption: string = 'Most Relevant'
+  selectedOption: string = 'Most Relevant';
   myButton() {
     console.log("my button was clicked!");
+  }
+  step = 0;
+
+  setStep(index: number) {
+    this.step = index;
   }
 }
