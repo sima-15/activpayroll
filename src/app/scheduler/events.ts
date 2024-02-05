@@ -792,7 +792,7 @@ const randomInt = (): number => {
     return Math.random();
 }
 
-export const displayDate = new Date(currentYear, 5, 24);
+export const displayDate = new Date();
 
 export const sampleData = baseData.map(dataItem => (
     <SchedulerEvent> {
