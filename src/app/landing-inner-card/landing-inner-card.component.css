@@ -1,0 +1,105 @@
+.card-background{
+    background-color: #e8e8e84f;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.mat-icon{
+    height: 20px !important;
+    width: 20px !important;
+}
+/* .circle{
+    height: 20px;
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 100%;
+}
+.inner_circle{
+    padding: 10px;
+    background-color: orangered;
+} */
+
+.outer {
+    background-color: lightgray;
+    height: 22px;
+    width: 22px;
+    margin-right: 3px;
+  }
+
+  .inner {
+    background-color: orangered;
+    height: 15px;
+    width: 15px;
+  }
+
+  /* Special circle class to enhance html readability */
+  .circle {
+    border-radius: 50%;
+  }
+
+  /* Add this to the outer circle - Flex */ 
+  /* Added to the inner circle to center text */
+  .center-f-inside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Add this to the outer circle - Grid */ 
+  /* Added to the inner circle to center text */
+  .center-g-inside {
+    display: grid;
+    place-items: center;
+  }
+
+  /* Add this to the outer circle - Positioning */
+  .relative {
+    position: relative;
+  }
+
+  /* Add this to the inner circle - Positioning */
+  .center-p-inside {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* This pseudo element is only used to center text, ignore */
+  .center-p-inside::after {
+    content: "absolute";
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .col-4 {
+    flex: 0 0 auto;
+    width: 35.333333% !important;
+}
+.col-8 {
+    flex: 0 0 auto;
+    width: 63.666667% !important;
+}
+.mat-mdc-progress-bar{
+    --mdc-linear-progress-active-indicator-height: 18px !important;
+    --mdc-linear-progress-track-height: 19px !important;
+}
+.mdc-linear-progress__bar-inner{
+    border-radius: 5px !important;
+}
+.mdc-linear-progress{
+    border-radius: 5px !important;
+}
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .mat-progress-bar {
+    height: 30px;
+  }

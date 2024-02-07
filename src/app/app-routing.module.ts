@@ -4,6 +4,7 @@ import { ActpayUpcomingComponent } from './actpay-upcoming/actpay-upcoming.compo
 import { HomeComponent } from './home/home.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,6 +15,9 @@ const routes: Routes = [
   },
   {
     path: 'scheduler', component: SchedulerComponent
+  },
+  {
+    path: 'landing-page', component: LandingPageComponent
   }
 ];
 
