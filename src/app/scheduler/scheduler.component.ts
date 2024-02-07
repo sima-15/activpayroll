@@ -12,22 +12,37 @@ export class SchedulerComponent implements OnInit {
     public events: SchedulerEvent[] = sampleData;
 
     public group: any = {
-      resources: ['Rooms'],
+      resources: ['Rooms', 'Attendees'],
       orientation: 'vertical'
   };
 
   public resources: any[] = [{
       name: 'Rooms',
       data: [
-          { text: 'Canada Weekly Payroll', value: 1, color: '#6eb3fa' },
+          { text: 'Canada Weekly Payroll', value: 1, color: '#2572c0' },
           { text: 'Canada Monthly Payroll', value: 2, color: '#f58a8a' },
           { text: 'Canada Fortnightly Payroll', value: 3, color: '#f58a8a' }
       ],
       field: 'roomId',
-      valueField: 'value',
-      textField: 'text',
-      colorField: 'blue'
-  }];
+       valueField: 'value',
+       textField: 'text',
+      // colorField: 'pink',
+      // multiple: true
+  }, {
+            field: "attendees",
+            name: 'Attendees',
+            data: [
+                { text: "Production Staff", value: 1 },
+                // { text: "Bob", value: 2 },
+                // { text: "Charlie", value: 3 }
+            ],
+            //multiple: true,
+            //title: "Attendees",
+            valueField: 'value',
+       textField: 'text',
+        
+}
+];
 
   constructor() { }
 
