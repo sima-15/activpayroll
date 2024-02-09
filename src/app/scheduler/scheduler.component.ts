@@ -1,15 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { sampleData, displayDate } from './events';
-import { SchedulerEvent } from '@progress/kendo-angular-scheduler';
+import { Component, ElementRef, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
+ import { sampleData, displayDate, sampleDataWithCustomSchema } from './events';
+//import { sampleData, displayDate, sampleDataWithCustomSchema } from './events-uts';
+import { EventStyleArgs, SchedulerEvent } from '@progress/kendo-angular-scheduler';
+import { SchedulerModelFields } from '@progress/kendo-angular-scheduler';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-scheduler',
   templateUrl: './scheduler.component.html',
-  styleUrls: ['./scheduler.component.css']
+  styleUrls: ['./scheduler.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class SchedulerComponent implements OnInit {
   public selectedDate: Date = displayDate;
     public events: SchedulerEvent[] = sampleData;
+   //public events: any[] = sampleDataWithCustomSchema;
+    public eventFields: SchedulerModelFields = {
+        id: 'TaskID',
+        title: 'Title',
+        description: 'Description',
+        startTimezone: 'StartTimezone',
+        start: 'Start',
+        end: 'End',
+        endTimezone: 'EndTimezone',
+        isAllDay: 'IsAllDay',
+        recurrenceRule: 'RecurrenceRule',
+        recurrenceId: 'RecurrenceID',
+        recurrenceExceptions: 'RecurrenceException'
+    };
+
 
     public group: any = {
       resources: ['Rooms', 'Attendees'],
@@ -21,7 +40,10 @@ export class SchedulerComponent implements OnInit {
       data: [
           { text: 'Canada Weekly Payroll', value: 1, color: '#2572c0' },
           { text: 'Canada Monthly Payroll', value: 2, color: '#f58a8a' },
-          { text: 'Canada Fortnightly Payroll', value: 3, color: '#f58a8a' }
+          { text: 'Canada Fortnightly Payroll', value: 3, color: '#f58a8a' },
+          { text: 'Australia Weekly Payroll', value: 4, color: '#2572c0' },
+          { text: 'Australia Monthly Payroll', value: 5, color: '#f58a8a' },
+          { text: 'Australia Fortnightly Payroll', value: 6, color: '#f58a8a' }
       ],
       field: 'roomId',
        valueField: 'value',
@@ -33,8 +55,6 @@ export class SchedulerComponent implements OnInit {
             name: 'Attendees',
             data: [
                 { text: "Production Staff", value: 1 },
-                // { text: "Bob", value: 2 },
-                // { text: "Charlie", value: 3 }
             ],
             //multiple: true,
             //title: "Attendees",
@@ -44,9 +64,22 @@ export class SchedulerComponent implements OnInit {
 }
 ];
 
-  constructor() { }
+
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit(): void {
+    const currentDate = formatDate(new Date(), 'yyyy-MM-dd', 'en-US');
+
+    const todayColumn = this.el.nativeElement.querySelector(`.k-scheduler-day[data-date='${currentDate}']`);
+
+    if(todayColumn) {
+    this.renderer.addClass(todayColumn, 'today');
+    }
   }
+
+  public getEventClass = (args: EventStyleArgs) => {
+    const eventId = args.event.dataItem.id;
+    return eventId % 2 === 0 ? 'even-id' : 'odd-id';
+  };
 
 }

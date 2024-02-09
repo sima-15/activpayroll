@@ -15,17 +15,27 @@
     </kendo-scheduler-timeline-month-view>
 </kendo-scheduler> -->
 
-<kendo-scheduler
-      [kendoSchedulerBinding]="events"
-      [selectedDate]="selectedDate"  [group]="group" [resources]="resources"
-    >
-      <!-- <ng-template kendoSchedulerAllDayEventTemplate let-event="event">
+ <!-- old <ng-template kendoSchedulerAllDayEventTemplate let-event="event">
         <span style="color:yellow;">{{ event.title }}</span>
       </ng-template> -->
       <!-- <kendo-scheduler-week-view> </kendo-scheduler-week-view> -->
-      <kendo-scheduler-timeline-view>
-      </kendo-scheduler-timeline-view>
+
+<kendo-scheduler
+      [kendoSchedulerBinding]="events"
+      [selectedDate]="selectedDate"  [group]="group" [resources]="resources" [eventClass]="getEventClass"
+      startTime="11:00" endTime="11:30">
+      <ng-template kendoSchedulerDateHeaderTemplate let-date="date">
+        <strong>{{ date | date:'E' }}</strong><br>
+        <strong>{{ date | date:'dd' }}</strong>
+        </ng-template>
+   
+    <kendo-scheduler-timeline-week-view>
+    </kendo-scheduler-timeline-week-view>
+       <!-- <kendo-scheduler-timeline-view>
+      </kendo-scheduler-timeline-view>  -->
     </kendo-scheduler>
+
+    
 
 <!-- <kendo-scheduler [kendoSchedulerBinding]="events"
                          [selectedDate]="selectedDate" [selectedViewIndex]="1"
@@ -36,3 +46,32 @@
             <kendo-scheduler-month-view [eventHeight]="30">
             </kendo-scheduler-month-view>
         </kendo-scheduler> -->
+
+
+<!-- <kendo-scheduler [kendoSchedulerBinding]="events"
+        [modelFields]="eventFields"
+        [selectedDate]="selectedDate"
+        style="height: 600px;">
+<ng-template kendoSchedulerEventTemplate let-event>
+{{ event.title }} (ID: {{ event.dataItem.TaskID }})
+</ng-template>
+
+<kendo-scheduler-day-view startTime="07:00">
+</kendo-scheduler-day-view>
+</kendo-scheduler> -->
+
+<!-- <kendo-scheduler [kendoSchedulerBinding]="events"
+[selectedDate]="selectedDate"
+[group]="group" [resources]="resources"
+style="height: 700px;"
+startTime="11:00" endTime="11:30"  >
+<ng-template kendoSchedulerDateHeaderTemplate let-date="date">
+<strong>{{ date | date:'E' }}</strong>
+</ng-template>
+<ng-template kendoSchedulerTimeSlotTemplate let-date="date">
+<strong>{{ date | date : 'd' }}</strong>
+</ng-template> 
+<kendo-scheduler-timeline-month-view>
+</kendo-scheduler-timeline-month-view>
+
+</kendo-scheduler> -->
