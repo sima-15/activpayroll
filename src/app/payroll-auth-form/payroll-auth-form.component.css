@@ -1,0 +1,8 @@
+#option_button {
+    text-align: left;
+    margin-right: 30px;
+   }
+   
+   #option_button b {
+        display: block
+   }

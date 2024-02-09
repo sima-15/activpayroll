@@ -1,0 +1,47 @@
+[
+    {
+        "componentName": "Net Pay",
+        "currency": "$17453"
+    },
+    {
+        "componentName": "Withheld Salary",
+        "currency": "$0"
+    },
+    {
+        "componentName": "Total Net Pay For Release",
+        "total": true,
+        "currency": "$17453",
+        "fundingDate": "20-Apr-2023",
+        "paymentDate": "20-Apr-2023"
+    },
+    {
+        "componentName": "Mandetory Provided Fund(MPF)- Employee",
+        "currency": "$3000"
+    },
+    {
+        "componentName": "Mandetory Provided Fund(MPF)- Employer",
+        "currency": "$3000"
+    },
+    {
+        "componentName": "Total Contribution to MPF",
+        "total": true,
+        "currency": "$6000",
+        "fundingDate": "N/A",
+        "paymentDate": "20-Apr-2023"
+    },
+    {
+        "componentName": "Total Payroll As Per Approval",
+        "total": true,
+        "currency": "$1000000"
+    },
+    {
+        "componentName": "Payment Arranged By activepayroll(Net Payment)",
+        "total": true,
+        "currency": "$50000"
+    },
+    {
+        "componentName": "Payment to be Arranged By T HK(MPF)",
+        "total": true,
+        "currency": "$50000"
+    }
+]
