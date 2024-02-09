@@ -1,0 +1,54 @@
+<nav class="flex-column flex-sm-row navbar navbar-light justify-content-between">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button id="option_button"
+            class="nav-link flex-sm-fill text-sm-left mr-1"><b>Country</b><small>CANADA</small></button>
+        <button id="option_button" class="nav-link flex-sm-fill text-sm-left mr-1"><b>Pay</b><small>Monthly
+                Payroll-Facilities Management</small></button>
+        <button  id="option_button" class="nav-link flex-sm-fill text-sm-left mr-1"><b>Payroll
+                Period</b><small>28th Mar-29th Apr</small></button>
+    </div>
+    <button  class="btn btn-sm" >Download</button>
+</nav> 
+<kendo-grid #grid [data]="view" scrollable='none'>
+    <!-- <ng-template kendoGridToolbarTemplate>
+        <button kendoGridPDFCommand [svgIcon]="filePdfIcon">
+          Export to PDF
+        </button>
+      </ng-template> -->
+    <kendo-grid-column field="componentName" title="">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <span class="whole-cell" [style.font-weight]="customFontweight(dataItem.total)">
+                {{ dataItem.componentName}}
+            </span>
+        </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="currency" editor="text" title="Currency">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <span class="whole-cell" [style.display]="customDisplay(dataItem.total)">
+                {{dataItem.currency}}
+            </span>
+        </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="currency" editor="text" title="Currency">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <span class="whole-cell" [style.display]="reverseCustomDisplay(dataItem.total)"
+                [style.font-weight]="customFontweight(dataItem.total)">
+                {{dataItem.currency}}
+            </span>
+        </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="fundingDate" editor="text" title="Funding Date"></kendo-grid-column>
+    <kendo-grid-column field="paymentDate" editor="text" title="Payment Date"></kendo-grid-column>
+    <kendo-grid-pdf
+    fileName="Auth-form.pdf"
+    [allPages]="true"
+    paperSize="A4"
+  >
+    <kendo-grid-pdf-margin
+      top="1cm"
+      left="1cm"
+      right="1cm"
+      bottom="1cm"
+    ></kendo-grid-pdf-margin>
+  </kendo-grid-pdf>
+</kendo-grid>
