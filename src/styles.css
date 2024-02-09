@@ -69,6 +69,9 @@ body {
   .m-b-5{
     margin-bottom: 5px !important;
   }
+  .m-b-10{
+    margin-bottom: 10px !important;
+  }
   .m-t-0{
     margin-top: 0px;
   }
@@ -92,6 +95,9 @@ body {
 }
 .font-size-12{
   font-size: 12px;
+}
+.font-size-21{
+  font-size: 21px;
 }
 .font-size-22{
   font-size: 22px;
@@ -377,4 +383,35 @@ body {
 }
 .red-color{
   color: red
+}
+.white-color{
+  color: white;
+}
+.text-center{
+  text-align: center !important;
+}
+.mat-mdc-dialog-container .mdc-dialog__content{
+  color: black !important;
+}
+/* .mat-button-toggle-button{
+  border: 1px solid orangered !important;
+  border-radius: 5px;
+  color: orangered !important;
+} */
+.mat-button-toggle-appearance-standard{
+  border: 1px solid orangered !important;
+  border-radius: 5px;
+  color: orangered !important;
+}
+.mat-button-toggle-standalone.mat-button-toggle-appearance-standard, .mat-button-toggle-group-appearance-standard{
+  border: none !important;
+}
+.mat-button-toggle-group-appearance-standard .mat-button-toggle-appearance-standard+.mat-button-toggle-appearance-standard{
+  border-left: none !important;
+}
+.mat-button-toggle-appearance-standard.mat-button-toggle-checked{
+  background-color: blue !important;
+  border-radius: 5px !important;
+  color: #f3f0f0 !important;
+  border: none !important;
 }

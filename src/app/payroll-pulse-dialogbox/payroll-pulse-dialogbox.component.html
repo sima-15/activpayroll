@@ -1,0 +1,19 @@
+
+<mat-dialog-content class="mat-typography text-center">
+  <img src="../../assets/image/pulse-payroll-image.png"/>
+  <h2>Payroll Pulse</h2>
+  <p>How did you feel your experience was this payroll period <br/> based on the below categories?</p>
+  <form>
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="m-b-10">
+        <mat-button-toggle value="1 Poor" class="m-r-5" (change)="onValChange($event.value)">1 Poor</mat-button-toggle>
+        <mat-button-toggle value="2 Not Acceptable" class="m-r-5" (change)="onValChange($event.value)">2 Not Acceptable</mat-button-toggle>
+        <mat-button-toggle value="3 Acceptable" class="m-r-5" (change)="onValChange($event.value)">3 Acceptable</mat-button-toggle>
+        <mat-button-toggle value="4 Very good" class="m-r-5" (change)="onValChange($event.value)">4 Very good</mat-button-toggle>
+        <mat-button-toggle value="5 Excellent" class="m-r-5" (change)="onValChange($event.value)">5 Excellent</mat-button-toggle>
+        <mat-button-toggle value="6 Perfect" class="m-r-5" (change)="onValChange($event.value)">6 Perfect</mat-button-toggle>
+    </mat-button-toggle-group>
+    <br/>
+    <button mat-raised-button [disabled]="isBtnSubmit" color="warn" mat-dialog-close>Confirn</button>
+  </form>
+  
+</mat-dialog-content>

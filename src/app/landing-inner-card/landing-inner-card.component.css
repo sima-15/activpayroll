@@ -103,3 +103,16 @@
   .mat-progress-bar {
     height: 30px;
   }
+  .outer-green-color{
+    background-color: 
+    #CCFFEF;
+  }
+  .inner-blue-color{
+    background-color: blue;
+  }
+  .check-icon-color{
+    color: #008059;
+  }
+  .mdc-button--outlined {
+    margin-right: 0px!important;
+}

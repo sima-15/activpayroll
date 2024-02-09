@@ -17,6 +17,8 @@ import { CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 import { GenericTableComponent } from './shared/generic-table/generic-table.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LandingInnerCardComponent } from './landing-inner-card/landing-inner-card.component';
+import { PayrollPulseDialogboxComponent } from './payroll-pulse-dialogbox/payroll-pulse-dialogbox.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -31,7 +33,8 @@ import { LandingInnerCardComponent } from './landing-inner-card/landing-inner-ca
     DialogBoxComponent,
     GenericTableComponent,
     LandingPageComponent,
-    LandingInnerCardComponent
+    LandingInnerCardComponent,
+    PayrollPulseDialogboxComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { LandingInnerCardComponent } from './landing-inner-card/landing-inner-ca
     MaterialModule,
     SchedulerModule,
     CdkDropList, 
-    CdkDrag
+    CdkDrag,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
