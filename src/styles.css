@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 html, body { 
   height: 100%; 
 }
@@ -384,6 +385,15 @@ body {
 .red-color{
   color: red
 }
+
+mat-sidenav[style] {
+  visibility: visible !important;
+}
+.mat-drawer {
+  transform: none !important;
+  display:block !important;
+}
+
 .white-color{
   color: white;
 }
