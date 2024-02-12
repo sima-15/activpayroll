@@ -40,8 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     GenericTableComponent,
     LandingPageComponent,
     LandingInnerCardComponent,
-    SidenavComponent
-    LandingInnerCardComponent,
+    SidenavComponent,
     PayrollPulseDialogboxComponent
   ],
   imports: [
