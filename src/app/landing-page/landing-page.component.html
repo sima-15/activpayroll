@@ -6,24 +6,24 @@
           (click)="myButton()"
           class="secondary-btn"
         >
-          <mat-icon>warning</mat-icon> 3 tasks overdue
+          3 tasks overdue
         </button>
         <button mat-stroked-button (click)="myButton()" class="m-l-0">
-          <mat-icon>shoping bag</mat-icon> 6 tasks due today
+          6 tasks due today
         </button>
         <button
           mat-stroked-button
           (click)="myButton()"
           class="secondary-btn m-l-0"
         >
-          <mat-icon>message</mat-icon> 1 query updates
+          1 query updates
         </button>
         <button
           mat-stroked-button
           (click)="myButton()"
           class="primary-btn"
         >
-          <mat-icon>warning</mat-icon>2 critical tasks
+          2 critical tasks
         </button>
       </div>
   </div>
@@ -32,18 +32,9 @@
       <div class="flex mr-t-22">
         <div class="mr-t-22"><b>Countries 4 of 8</b></div>
         <div>
-          <button mat-button color="warn">Clear Filter</button>
-          <button mat-stroked-button class="m-l-0">
-            <mat-icon>filter_alt</mat-icon> Filter(1)
-          </button>
-         
-          <mat-form-field appearance="outline">
-            <span class="dropdown-heading">Sort By:</span>
-            <mat-select [value]="selectedOption">
-              <mat-option value="Most Relevant">Most Relevant</mat-option>
-              <mat-option value="Relevant">Relevant</mat-option>
-            </mat-select>
-          </mat-form-field>
+          <div>
+            <app-filter></app-filter>
+          </div>
         </div>
       </div>
       
@@ -60,24 +51,24 @@
                   (click)="myButton()"
                   class="primary-btn"
                 >
-                  <mat-icon>warning</mat-icon>2 critical tasks
+                  <img src="../../assets/image/warning-icon.png"/> critical tasks
                 </button>
                 <button
                   mat-stroked-button
                   (click)="myButton()"
                   class="secondary-btn"
                 >
-                  <mat-icon>warning</mat-icon> 3 tasks overdue
+                <img src="../../assets/image/warning-red-icon.png"/> 3 tasks overdue
                 </button>
                 <button mat-stroked-button (click)="myButton()" class="m-l-0">
-                  <mat-icon>shoping bag</mat-icon> 6 tasks due today
+                  <img src="../../assets/image/bag-icon.png"/> 6 tasks due today
                 </button>
                 <button
                   mat-stroked-button
                   (click)="myButton()"
                   class="secondary-btn m-l-0"
                 >
-                  <mat-icon>message</mat-icon> 1 query updates
+                <img src="../../assets/image/message-icon.png"/> 1 query updates
                 </button>
               </div>
             </div>

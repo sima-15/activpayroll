@@ -116,3 +116,29 @@
   .mdc-button--outlined {
     margin-right: 0px!important;
 }
+.collate_btn{
+  color: maroon;
+  font-weight: 500;
+  background-color: #f6cccc;
+  border: none;
+  font-size: 14px;
+}
+.h6_text{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #404040;
+  letter-spacing: -2%;
+}
+.h6_text-para{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #404040;
+}
+.h6_text-para_para{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color:#737373;
+}

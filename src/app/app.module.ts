@@ -24,6 +24,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LandingInnerCardComponent } from './landing-inner-card/landing-inner-card.component';
 import { PayrollPulseDialogboxComponent } from './payroll-pulse-dialogbox/payroll-pulse-dialogbox.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FilterComponent } from './shared/filter/filter.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     GenericTableComponent,
     LandingPageComponent,
     LandingInnerCardComponent,
-    PayrollPulseDialogboxComponent
+    PayrollPulseDialogboxComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

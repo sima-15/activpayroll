@@ -366,7 +366,7 @@ body {
 .kpi_card{
   border: 1px solid lightgray;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 .font-weight-500{
@@ -407,7 +407,7 @@ body {
   border: none !important;
 }
 .mat-button-toggle-group-appearance-standard .mat-button-toggle-appearance-standard+.mat-button-toggle-appearance-standard{
-  border-left: none !important;
+  /* border-left: none !important; */
 }
 .mat-button-toggle-appearance-standard.mat-button-toggle-checked{
   background-color: blue !important;
@@ -415,3 +415,10 @@ body {
   color: #f3f0f0 !important;
   border: none !important;
 }
+.justify-content{
+  justify-content: center;
+}
+/* .icon-properties{
+  height: 20px !important;
+  width: 20px !important;
+} */

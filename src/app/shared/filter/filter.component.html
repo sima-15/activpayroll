@@ -1,0 +1,12 @@
+<button mat-button color="warn">Clear Filter</button>
+<button mat-stroked-button class="m-l-0">
+  <img src="../../../assets/image/filter-icon-left.png"/> Filter(1)
+</button>
+
+<mat-form-field appearance="outline">
+  <span class="dropdown-heading">Sort By:</span>
+  <mat-select [value]="selectedOption">
+    <mat-option value="Most Relevant">Most Relevant</mat-option>
+    <mat-option value="Relevant">Relevant</mat-option>
+  </mat-select>
+</mat-form-field>

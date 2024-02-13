@@ -8,7 +8,7 @@ import { MatAccordion } from '@angular/material/expansion';
 })
 export class LandingPageComponent {
   accordion!: MatAccordion;
-  selectedOption: string = 'Most Relevant';
+  
   myButton() {
     console.log("my button was clicked!");
   }
