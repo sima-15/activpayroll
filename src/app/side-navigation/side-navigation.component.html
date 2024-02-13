@@ -12,7 +12,10 @@
 			<mat-icon svgIcon="{{ route.icon }}" class="icons"></mat-icon>
 			<span  *ngIf="isExpanded"> {{route.name}}</span>
 		</p>
-		<mat-icon *ngIf="isExpanded" svgIcon="cheveron-right" class="cheveron-right"></mat-icon>
+		<span>
+			<mat-icon *ngIf="isExpanded" svgIcon="cheveron-right" class="cheveron-right"></mat-icon>
+		</span>
+		
 	</div>
 	</mat-nav-list>
 </section>
