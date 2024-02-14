@@ -26,6 +26,7 @@ import { SidenavComponent } from './side-navigation/side-navigation.component';
 import { PayrollPulseDialogboxComponent } from './payroll-pulse-dialogbox/payroll-pulse-dialogbox.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterComponent } from './shared/filter/filter.component';
+import { UserViewComponent } from './user-view/user-view.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { FilterComponent } from './shared/filter/filter.component';
     PayrollPulseDialogboxComponent,
     FilterComponent,
     SidenavComponent,
-    PayrollPulseDialogboxComponent
+    PayrollPulseDialogboxComponent,
+    UserViewComponent
   ],
   imports: [
     BrowserModule,
