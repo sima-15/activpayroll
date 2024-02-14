@@ -22,6 +22,7 @@ import { DialogModule } from '@progress/kendo-angular-dialog';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LandingInnerCardComponent } from './landing-inner-card/landing-inner-card.component';
+import { SidenavComponent } from './side-navigation/side-navigation.component';
 import { PayrollPulseDialogboxComponent } from './payroll-pulse-dialogbox/payroll-pulse-dialogbox.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterComponent } from './shared/filter/filter.component';
@@ -41,7 +42,9 @@ import { FilterComponent } from './shared/filter/filter.component';
     LandingPageComponent,
     LandingInnerCardComponent,
     PayrollPulseDialogboxComponent,
-    FilterComponent
+    FilterComponent,
+    SidenavComponent,
+    PayrollPulseDialogboxComponent
   ],
   imports: [
     BrowserModule,

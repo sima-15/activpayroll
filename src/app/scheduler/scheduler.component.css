@@ -1,0 +1,34 @@
+ /* .hide-all-day .k-scheduler-table tr:nth-of-type(0),
+.k-scheduler-times-all-day,
+.k-scheduler-table.k-scheduler-header-all-day {
+  display: none;
+} */
+
+/*::ng-deep .k-scheduler-times {
+    display: none;
+} */
+
+.k-scheduler-footer,.k-scheduler-toolbar,.k-scheduler-table tr:nth-child(3) {
+    display : none;
+}
+
+.k-scheduler-pane:first-child .k-scheduler-times .k-scheduler-table tr:nth-child(1) {
+    display : none;
+}
+
+.k-event-template {
+    border-radius: 0 50% 50% 0;
+}
+
+.even-id.k-event {
+    color: #ccf381;
+    background-color: #4831d4;
+  }
+  .odd-id.k-event {
+    color: #e2d1f9;
+    background-color: #317773;
+  }
+
+  .k-scheduler-timeline-week .k-scheduler-time .k-scheduler-day.today {
+    background-color: red;
+  } 
