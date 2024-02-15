@@ -1,5 +1,5 @@
 .sidenav {
-  width: 250px;
+  width: 260px;
 }
 
 .toggle {
@@ -34,11 +34,6 @@
   .active-link {
     .icons {
       background-color: #4143E7;
-      width: 32px;
-      height: 32px;
-      padding: 3px;
-      border-radius: 4px;
-
       path {
         stroke: #F7F7FF;
       }
@@ -58,10 +53,6 @@
     span {
       margin-left: -40%
     }
-  }
-
-  mat-icon {
-    color: #1976d2;
   }
 
   .cheveron-right {

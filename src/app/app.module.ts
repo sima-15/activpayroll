@@ -30,7 +30,7 @@ import { SelectCheckAllComponent } from './shared/filter/select-check-all.compon
 import { UserViewComponent } from './user-view/user-view.component';
 import { SyncfusionSchedulerComponent } from './syncfusion-scheduler/syncfusion-scheduler.component';
 import { AgendaService, DayService, MonthAgendaService, MonthService, ScheduleModule, WeekService, WorkWeekService } from '@syncfusion/ej2-angular-schedule';
-import { TimePickerModule } from '@progress/kendo-angular-dateinputs';
+import { TimePickerModule } from '@syncfusion/ej2-angular-calendars';
 
 
 @NgModule({
