@@ -1,7 +1,88 @@
-<button mat-button color="warn">Clear Filter</button>
-<button mat-stroked-button class="m-l-0">
-  <img src="../../../assets/image/filter-icon-left.png"/> Filter(1)
-</button>
+<span class="m-r-5">Filter</span>
+<mat-form-field appearance="outline" class="m-r-5">
+  <mat-select
+    placeholder="Select"
+    name="Select"
+    [(ngModel)]="selected"
+    multiple
+    #selectionModel="ngModel"
+    id="filter_select"
+  >
+    <mat-select-trigger> {{ selected.length }} countries </mat-select-trigger>
+    <app-select-check-all [model]="selectionModel" [values]="options">
+    </app-select-check-all>
+    <mat-option *ngFor="let option of options" [value]="option">
+      {{ option }}
+    </mat-option>
+    <div class="sticky-position">
+      <button
+        class="apply_filter_btn m-l-5 m-r-5"
+        mat-raised-button
+        color="warn"
+      >
+        Apply filter
+      </button>
+    </div>
+  </mat-select>
+</mat-form-field>
+
+<!-- <mat-form-field appearance="outline" class="m-r-5">
+  <mat-select
+    placeholder="Select"
+    name="Select"
+    [(ngModel)]="selected"
+    multiple
+    #selectionModel="ngModel"
+  >
+    <mat-select-trigger> {{ selected.length }} countries </mat-select-trigger>
+    <app-select-check-all [model]="selectionModel" [values]="options">
+    </app-select-check-all>
+    <mat-option *ngFor="let option of options" [value]="option">
+      {{ option }}
+    </mat-option>
+    <div class="sticky-position">
+      <button
+        class="apply_filter_btn m-l-5 m-r-5"
+        mat-raised-button
+        color="warn"
+      >
+        Apply filter
+      </button>
+    </div>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="outline" class="m-r-5">
+  <mat-select
+    placeholder="Select"
+    name="Select"
+    [(ngModel)]="selected"
+    multiple
+    #selectionModel="ngModel"
+  >
+    <mat-select-trigger> {{ selected.length }} countries </mat-select-trigger>
+    <app-select-check-all [model]="selectionModel" [values]="options">
+    </app-select-check-all>
+    <mat-option *ngFor="let option of options" [value]="option">
+      {{ option }}
+    </mat-option>
+    <div class="sticky-position">
+      <button
+        class="apply_filter_btn m-l-5 m-r-5"
+        mat-raised-button
+        color="warn"
+      >
+        Apply filter
+      </button>
+    </div>
+  </mat-select>
+</mat-form-field> -->
+
+<button mat-button color="warn" class="m-r-5">Clear Filter</button>
+<!-- <button mat-stroked-button class="m-l-0">
+  <img src="../../../assets/image/filter-icon-left.png" /> Filter(1)
+</button> -->
+<!-- <span class="m-r-5 border-right"> </span> -->
 
 <mat-form-field appearance="outline">
   <span class="dropdown-heading">Sort By:</span>

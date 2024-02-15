@@ -1,0 +1,11 @@
+.apply_filter_btn{
+    width: -webkit-fill-available;
+    
+}
+.sticky-position{
+    position: sticky;
+    bottom: 8px;
+}
+.mat-mdc-option{
+    flex-direction: row-reverse !important;
+}

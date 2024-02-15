@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-filter',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
 })
 export class FilterComponent {
   selectedOption: string = 'Most Relevant';
-  
+  options = ["Australia", "Canada", "China", "France", "Germany"];
+  selected = [];
 }

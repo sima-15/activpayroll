@@ -1,4 +1,4 @@
-<div class="flex mr-t-22">
+<div class="flex mr-t-22 align-item-baseline">
     <div class="mr-t-22 font-size-22"><b>Payroll</b></div>
     <div class="task-button-group">
         <button
@@ -29,7 +29,7 @@
   </div>
 <mat-tab-group>
     <mat-tab label="Overview">
-      <div class="flex mr-t-22">
+      <div class="flex mr-t-22 align-item-baseline">
         <div class="mr-t-22"><b>Countries 4 of 8</b></div>
         <div>
           <div>
@@ -41,8 +41,10 @@
       <mat-accordion class="example-headers-align" multi>
         <mat-expansion-panel expanded="true">
           <mat-expansion-panel-header>
-            <div class="my-panel" (click)="$event.stopPropagation()">
+            <div class="my-panel d-flex align-text-center" (click)="$event.stopPropagation()">
+              <img src="../../assets/image/🇬🇧.png" class="m-r-5 img-prop"/>
               <h2 class="mr-t-22">
+                
                 <b>Canada</b> <span class="p-l-12 font-size-15">3 Payrolls</span>
               </h2>
               <div class="task-button-group">
