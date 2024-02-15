@@ -1,24 +1,31 @@
 <!-- src/app/user-table/user-table.component.html -->
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 fixed">
   <!-- User Name Column -->
   <ng-container matColumnDef="userName">
-    <th mat-header-cell *matHeaderCellDef>User</th>
+    <th mat-header-cell *matHeaderCellDef>Payrolls</th>
     <td mat-cell *matCellDef="let user">
-      <img src="{{ user.image }}" alt="{{ user.name }}" class="user-image" />
-      {{ user.name }}
+      <div [ngClass]="{ 'group-cell': user.isGroupItem}">
+        <img *ngIf="user.image!=''" src="{{ user.image }}" alt="{{ user.name }}" class="user-image" />
+        <span class="payroll-name">{{ user.name }} </span>
+      </div>
     </td>
   </ng-container>
 
   <!-- Dynamic Task Columns -->
   <ng-container *ngFor="let day of days; let i = index" [matColumnDef]="'day' + i">
-    <th [style.background-color]=" isWeekend(day) ? 'lightgrey' : ''"  [style.border]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-header-cell *matHeaderCellDef>{{ day }}</th>
-    <td mat-cell [ngClass]="{'weekend': isWeekend(day)}" *matCellDef="let user">
-      <ng-container *ngFor="let task of user.tasks">
+    <th class="day-cell" [style.background-color]=" isWeekend(day) ? '#F5F5F5' : ''"  [style.border]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-header-cell *matHeaderCellDef>{{ day }}</th>
+    <td mat-cell *matCellDef="let user">
+      <ng-template [ngIf]="user.isGroupItem" [ngIfElse]="taskItem">
+        <div class="group-cell">&nbsp;</div>
+      </ng-template>
+      <ng-template #taskItem>
+        <ng-container *ngFor="let task of user.tasks">
        <div class="task" id="container" [ngStyle]="{ 'background-color': task.color }" *ngIf="isTaskOnDay(task, day)" >
        {{task.name}}
         <!-- {{isEventSpanningMultipleDays(task)}}      -->
         </div>
       </ng-container>
+      </ng-template>
       <div class="ruler" [ngClass]="{'showRuler': calculateRulerPosition(day)}"></div>
     </td>
   </ng-container>
