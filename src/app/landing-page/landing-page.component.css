@@ -1,3 +1,10 @@
 .img-prop{
     height: 20px;
 }
+.warning-icon{
+    height: 14px;
+}
+.task-overdue{
+    background: #f6cccc78 !important;
+    border: 1px solid #eab9b9 !important;
+}

@@ -70,11 +70,14 @@ body {
   .m-b-5{
     margin-bottom: 5px !important;
   }
+  .m-b-2{
+    margin-bottom: 2px !important;
+  }
   .m-b-10{
     margin-bottom: 10px !important;
   }
   .m-t-0{
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
   .m-l-0{
     margin-left: 0px !important;
@@ -91,10 +94,16 @@ body {
 .font-size-15{
     font-size: 15px;
 }
+.font-size-14{
+  font-size: 14px;
+}
 .font-size-17{
   font-size: 17px;
 }
 .font-size-12{
+  font-size: 12px;
+}
+.font-size-13{
   font-size: 12px;
 }
 .font-size-11{
@@ -131,14 +140,26 @@ body {
 .m-r-5{
     margin-right: 5px;
 }
+.m-r-8{
+  margin-right: 8px;
+}
 .m-l-5{
   margin-left: 5px;
+}
+.m-l-10{
+  margin-left: 10px;
 }
 .p-l-12{
   padding-left: 12px;
 }
 .p-r-12{
   padding-right: 12px;
+}
+.p-r-0{
+  padding-right: 0px;
+}
+.p-r-30{
+  padding-right: 30px !important;
 }
 .p-t-3{
   padding-top: 2px;
@@ -164,6 +185,7 @@ body {
 }
 .mat-expansion-indicator::after{
   color: orangered !important;
+  margin-bottom: -6px !important;
 }
 .mat-elevation-z8, .mat-mdc-elevation-specific.mat-elevation-z8{
   /* box-shadow: none !important; */
@@ -175,10 +197,11 @@ body {
   margin: 18px 0px !important;
 }
 .mat-expansion-indicator{
-  width: 25px !important;
-  height: 25px !important;
+  width: 33px !important;
+  height: 33px !important;
   text-align: center !important;
   background-color: antiquewhite !important;
+  border-radius: 5px;
   
 }
 .example-small-box, .example-large-box {
@@ -373,11 +396,17 @@ body {
   padding: 9px;
   text-align: center;
 }
+.font-weight-400{
+  font-weight: 400;
+}
 .font-weight-500{
   font-weight: 500;
 }
 .font-weight-700{
   font-weight: 700;
+}
+.font-weight-600{
+  font-weight: 600;
 }
 .blue-color{
   color: blue;
@@ -467,8 +496,8 @@ mat-sidenav[style] {
   background-color: #C2C2FF !important;
 }
 .mat-pseudo-checkbox-full{
-  color: #C2C2FF;
-  background-color: #C2C2FF;
+  color: #F0F0FF;
+  background-color: #F0F0FF;
 }
 .mdc-checkbox__checkmark{
   width: 10px !important;
@@ -520,4 +549,53 @@ div.mat-mdc-select-panel{
 }
 .align-item-baseline{
   align-items: baseline;
+}
+.w3-border{
+  border: none !important;
+  background: #cacaed;
+  border-radius: 5px;
+  height: 20px;
+}
+.w3-grey, .w3-hover-grey:hover, .w3-gray, .w3-hover-gray:hover{
+  height: 20px;
+  width: 20%;
+  text-align: right;
+  border-radius: 5px;
+  color: #fff !important;
+  background-color: #3f51b5 !important;
+  text-align: right
+}
+.progress-bar-span-padding{
+  padding-right: 7px;
+}
+.mat-mdc-outlined-button:not(:disabled){
+  letter-spacing: inherit !important;
+}
+.mat-mdc-form-field{
+  flex-direction: unset !important;
+}
+.mat-expansion-panel-header{
+  padding: 0 14px !important;
+}
+.mat-mdc-button .mdc-button__label, .mat-mdc-unelevated-button .mdc-button__label, .mat-mdc-raised-button .mdc-button__label, .mat-mdc-outlined-button .mdc-button__label{
+  display: flex !important;
+  align-items: center !important;
+}
+.border-radius-left-top-0{
+  border-top-left-radius: 0px !important;
+}
+.border-radius-left-bottom-0{
+  border-bottom-left-radius: 0px !important;
+}
+.border-radius-right-top-0{
+  border-top-right-radius: 0px !important;
+}
+.border-radius-right-bottom-0{
+  border-bottom-right-radius: 0px !important;
+}
+.cdk-overlay-pane{
+  width: 200px !important;
+}
+.no-border-radius{
+  border-radius: 0px !important;
 }
