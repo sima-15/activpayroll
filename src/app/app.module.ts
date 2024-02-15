@@ -28,6 +28,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterComponent } from './shared/filter/filter.component';
 import { SelectCheckAllComponent } from './shared/filter/select-check-all.component';
 import { UserViewComponent } from './user-view/user-view.component';
+import { SyncfusionSchedulerComponent } from './syncfusion-scheduler/syncfusion-scheduler.component';
+import { AgendaService, DayService, MonthAgendaService, MonthService, ScheduleModule, WeekService, WorkWeekService } from '@syncfusion/ej2-angular-schedule';
+import { TimePickerModule } from '@syncfusion/ej2-angular-calendars';
 
 
 @NgModule({
@@ -48,7 +51,8 @@ import { UserViewComponent } from './user-view/user-view.component';
     SidenavComponent,
     PayrollPulseDialogboxComponent,
     SelectCheckAllComponent,
-    UserViewComponent
+    UserViewComponent,
+    SyncfusionSchedulerComponent
   ],
   imports: [
     BrowserModule,
@@ -69,9 +73,17 @@ import { UserViewComponent } from './user-view/user-view.component';
     ButtonsModule,
     CdkDropList, 
     CdkDrag,
-    
+    ScheduleModule,
+    TimePickerModule,
   ],
-  providers: [],
+  providers: [
+    DayService,
+    WeekService,
+    WorkWeekService,
+    MonthService,
+    AgendaService,
+    MonthAgendaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
