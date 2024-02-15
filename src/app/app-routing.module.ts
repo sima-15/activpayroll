@@ -6,6 +6,7 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
 import { PayrollAuthFormComponent } from './payroll-auth-form/payroll-auth-form.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserViewComponent } from './user-view/user-view.component';
+import { SyncfusionSchedulerComponent } from './syncfusion-scheduler/syncfusion-scheduler.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   {
     path: 'calender-view', component: UserViewComponent
+  },
+{
+    path: 'syncscheduler', component: SyncfusionSchedulerComponent
   },
   { path: "**", redirectTo: "payroll" },
 
