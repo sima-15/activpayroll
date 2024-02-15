@@ -27,6 +27,7 @@ import { PayrollPulseDialogboxComponent } from './payroll-pulse-dialogbox/payrol
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterComponent } from './shared/filter/filter.component';
 import { SelectCheckAllComponent } from './shared/filter/select-check-all.component';
+import { UserViewComponent } from './user-view/user-view.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { SelectCheckAllComponent } from './shared/filter/select-check-all.compon
     FilterComponent,
     SidenavComponent,
     PayrollPulseDialogboxComponent,
-    SelectCheckAllComponent
+    SelectCheckAllComponent,
+    UserViewComponent
   ],
   imports: [
     BrowserModule,

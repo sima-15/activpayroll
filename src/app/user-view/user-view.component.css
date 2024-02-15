@@ -1,0 +1,57 @@
+/* src/app/user-table/user-table.component.css */
+.mat-row,
+.mat-header-row {
+  height: 50px;
+}
+
+.user-image {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.task {
+  padding: 2px;
+  margin: 2px;
+  border-radius: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.weekend {
+  background-color: lightgray;
+}
+
+.ruler {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 65%;
+  border-left: 2px solid skyblue;
+  margin-top: 7%;
+  align-items: center;
+}
+
+.showRuler {
+  display: block;
+}
+
+.highlightDate {
+  border: 2px solid skyblue;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-items: left;
+}
+
+.newEvent {
+  background-color: red;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  position: absolute;
+}
