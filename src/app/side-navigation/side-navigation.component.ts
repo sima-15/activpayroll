@@ -26,7 +26,7 @@ export class SidenavComponent {
     {  link: "payroll_upcoming", name: "Report", icon: "clipboard-list"},
     {  link: "authform", name: "ePay", icon: "credit-card"},
     {  link: "landing-page", name: "Performance", icon: "document-duplicate"},
-    {  link: "syncscheduler", name: "Settings", icon: "document-duplicate"}
+    // {  link: "syncscheduler", name: "Settings", icon: "document-duplicate"}
   ];
 
 }
