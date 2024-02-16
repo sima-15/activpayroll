@@ -1,25 +1,33 @@
 <!-- src/app/user-table/user-table.component.html -->
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 fixed">
   <!-- User Name Column -->
   <ng-container matColumnDef="userName">
-    <th mat-header-cell *matHeaderCellDef>User</th>
+    <th mat-header-cell *matHeaderCellDef>Payrolls</th>
     <td mat-cell *matCellDef="let user">
-      <img src="{{ user.image }}" alt="{{ user.name }}" class="user-image" />
-      {{ user.name }}
+      <div [ngClass]="{ 'group-cell': user.isGroupItem}">
+        <img [ngClass]="{ hideImg: !user.image}" src="{{ user.image }}" alt="{{ user.name }}" class="user-image" />
+        <span class="payroll-name">{{ user.name }} </span>
+        <img style="float: right;padding-right: 10px;" *ngIf="user.name == 'Monthly Payroll' || user.name == 'Fortnightly Payroll' || user.name == 'Weekly Payroll'" src="../assets/image/right-angle-icon.png" alt="{{ user.name }}"/>
+      </div>
     </td>
   </ng-container>
 
   <!-- Dynamic Task Columns -->
   <ng-container *ngFor="let day of days; let i = index" [matColumnDef]="'day' + i">
-    <th [style.background-color]=" isWeekend(day) ? 'lightgrey' : ''"  [style.border]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-header-cell *matHeaderCellDef>{{ day }}</th>
-    <td [style.border-right]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-cell [ngClass]="{'weekend': isWeekend(day)}" *matCellDef="let user">
-      <ng-container *ngFor="let task of user.tasks">
-       <div class="task" id="container" [ngStyle]="{ 'background-color': task.color }" *ngIf="isTaskOnDay(task, day)" >
-       {{task.name}}
+    <th class="day-cell" [style.background-color]=" isWeekend(day) ? '#F5F5F5' : ''"  [style.border]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-header-cell *matHeaderCellDef>{{ day }}</th>
+    <td id="cell" [style.border-right]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-cell *matCellDef="let user">
+      <ng-template [ngIf]="user.isGroupItem" [ngIfElse]="taskItem">
+        <div class="group-cell">&nbsp;</div>
+      </ng-template>
+      <ng-template #taskItem>
+        <ng-container *ngFor="let task of user.tasks">
+       <div #event class="task" id="event_{{count}}" [ngStyle]="{ 'background-color': task.color }" *ngIf="isTaskOnDay(task, day)" >
+       <!-- {{showTask ? task.name : ''}} -->
         <!-- {{isEventSpanningMultipleDays(task)}}      -->
+        {{task.name}}
         </div>
       </ng-container>
-      <!-- <div class="ruler" [ngClass]="{'showRuler': calculateRulerPosition(day)}"></div> -->
+      </ng-template>
     </td>
   </ng-container>
 
