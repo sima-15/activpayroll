@@ -1,5 +1,5 @@
 <span class="m-r-5">Filter</span>
-<mat-form-field appearance="outline" class="m-r-5">
+<mat-form-field appearance="outline" class="m-r-5 filter-dropdown">
   <mat-select
     placeholder="Select"
     name="Select"
@@ -12,7 +12,14 @@
     <app-select-check-all [model]="selectionModel" [values]="options">
     </app-select-check-all>
     <mat-option *ngFor="let option of options" [value]="option">
-      {{ option }}
+      <div class="d-flex align-item-baseline">
+        <span class="m-r-8">
+          <img class="img_flag" src="{{option.icon}}" />
+        </span>
+        <span class="font-size-14">
+          {{ option.name }}
+        </span>       
+      </div>
     </mat-option>
     <div class="sticky-position">
       <button
@@ -26,7 +33,7 @@
   </mat-select>
 </mat-form-field>
 
-<!-- <mat-form-field appearance="outline" class="m-r-5">
+<!-- <mat-form-field appearance="outline" class="m-r-5 filter-dropdown">
   <mat-select
     placeholder="Select"
     name="Select"
@@ -52,7 +59,7 @@
   </mat-select>
 </mat-form-field>
 
-<mat-form-field appearance="outline" class="m-r-5">
+<mat-form-field appearance="outline" class="m-r-5 filter-dropdown">
   <mat-select
     placeholder="Select"
     name="Select"

@@ -9,3 +9,10 @@
 .mat-mdc-option{
     flex-direction: row-reverse !important;
 }
+.img_flag{
+    height: 18px;
+}
+
+/* .filter-dropdown{
+    max-width: 15%!important;
+} */

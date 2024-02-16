@@ -1,40 +1,41 @@
-<div class="flex mr-t-22 align-item-baseline">
-    <div class="mr-t-22 font-size-22"><b>Payroll</b></div>
-    <div class="task-button-group">
-        <button
-          mat-stroked-button
-          (click)="myButton()"
-          class="secondary-btn"
-        >
-          3 tasks overdue
-        </button>
-        <button mat-stroked-button (click)="myButton()" class="m-l-0">
+<div class="flex align-item-baseline">
+    <div class="font-size-22"><b>Payroll</b></div>
+    <div class="">
+        <button mat-stroked-button (click)="myButton()" 
+          class="m-l-0 font-weight-500">
           6 tasks due today
         </button>
         <button
           mat-stroked-button
           (click)="myButton()"
-          class="secondary-btn m-l-0"
+          class="primary-btn m-r-0 font-weight-500"
         >
-          1 query updates
+          2 critical tasks
         </button>
         <button
           mat-stroked-button
           (click)="myButton()"
-          class="primary-btn"
+          class="secondary-btn font-weight-500 task-overdue"
         >
-          2 critical tasks
+          3 tasks overdue
         </button>
+       
+        <button
+          mat-stroked-button
+          (click)="myButton()"
+          class="m-l-0 font-weight-500"
+        >
+          1 query updates
+        </button>
+        
       </div>
   </div>
 <mat-tab-group>
     <mat-tab label="Overview">
-      <div class="flex mr-t-22 align-item-baseline">
+      <div class="flex align-item-baseline">
         <div class="mr-t-22"><b>Countries 4 of 8</b></div>
         <div>
-          <div>
-            <app-filter></app-filter>
-          </div>
+          <app-filter></app-filter>
         </div>
       </div>
       
@@ -42,10 +43,10 @@
         <mat-expansion-panel expanded="true">
           <mat-expansion-panel-header>
             <div class="my-panel d-flex align-text-center" (click)="$event.stopPropagation()">
-              <img src="../../assets/image/🇬🇧.png" class="m-r-5 img-prop"/>
+              
               <h2 class="mr-t-22">
-                
-                <b>Canada</b> <span class="p-l-12 font-size-15">3 Payrolls</span>
+                <img src="../../assets/image/GB.png" class="m-r-5 img-prop"/>
+                <span>Canada</span> <span class="p-l-12 font-size-15 font-weight-400">3 Payrolls</span>
               </h2>
               <div class="task-button-group">
                 <button
@@ -53,24 +54,28 @@
                   (click)="myButton()"
                   class="primary-btn"
                 >
-                  <img src="../../assets/image/warning-icon.png"/> critical tasks
+                  <img src="../../assets/image/warning-icon.png" class="warning-icon"/> 
+                  <span class="font-weight-400 m-l-10">1 critical tasks</span> 
                 </button>
                 <button
                   mat-stroked-button
                   (click)="myButton()"
-                  class="secondary-btn"
+                  class="secondary-btn border-radius-right-top-0 border-radius-right-bottom-0"
                 >
-                <img src="../../assets/image/warning-red-icon.png"/> 3 tasks overdue
+                <img src="../../assets/image/warning-red-icon.png" class="warning-icon"/> 
+                <span class="font-weight-400 m-l-10">3 tasks overdue</span>
                 </button>
-                <button mat-stroked-button (click)="myButton()" class="m-l-0">
-                  <img src="../../assets/image/bag-icon.png"/> 6 tasks due today
+                <button mat-stroked-button (click)="myButton()" class="m-l-0 no-border-radius">
+                  <img src="../../assets/image/bag-icon.png" class="warning-icon"/> 
+                  <span class="font-weight-400 m-l-10">6 tasks due today</span>
                 </button>
                 <button
                   mat-stroked-button
                   (click)="myButton()"
-                  class="secondary-btn m-l-0"
+                  class="secondary-btn m-l-0 border-radius-left-top-0 border-radius-left-bottom-0"
                 >
-                <img src="../../assets/image/message-icon.png"/> 1 query updates
+                <img src="../../assets/image/message-icon.png" class="warning-icon"/> 
+                <span class="font-weight-400 m-l-10">1 query updates</span>
                 </button>
               </div>
             </div>

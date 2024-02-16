@@ -38,7 +38,6 @@ export class SelectCheckAllComponent implements OnInit {
   toggleSelection(change: MatCheckboxChange): void {
     if (change.checked) {
       this.model.update.emit(this.values);
-      console.log(this.values.length)
     } else {
       this.model.update.emit([]);
     }
