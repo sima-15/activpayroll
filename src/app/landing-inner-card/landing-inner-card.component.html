@@ -41,12 +41,15 @@
             <div class="flex align-text-center justify-content">
                 <div class="kpi_card">
                     <p class="m-b-5 font-weight-700 font-size-11">27th Feb - 28th Mar</p>
-                    <div class="m-b-5">
-                        <div class="w3-border">
-                            <div class="w3-grey" style="width:60%;">
-                                <span class="progress-bar-span-padding">60</span>
-                            </div>
-                        </div>
+                    <div class="m-b-5 font-size-25 blue-color font-weight-700 example-section">
+                        <mat-progress-bar
+                            class="example-margin"
+                            [color]="color"
+                            [mode]="mode"
+                            [value]="MonthlyPulseProgress"
+                            aria-valuemax="MonthlyPulseValueMax">
+                        </mat-progress-bar>
+                        <div style="position: absolute; padding: 10px; color: white; font-size: 12px;    text-align: right;" [style.width]="((MonthlyPulseProgress/100*10) + 1) + '%'"> {{MonthlyPulseValue}} </div>
                     </div>
                     <p class="m-b-5"><span class="red-color">-1 </span>vs previous</p>
                 </div>
@@ -90,16 +93,16 @@
             <div class="flex align-text-center justify-content">
                 <div class="kpi_card">
                     <p class="m-b-5 font-weight-700 font-size-11">27th Feb - 28th Mar</p>
-                    <p class="m-b-5 font-size-25 blue-color font-weight-700">
+                    <div class="m-b-5 font-size-25 blue-color font-weight-700 example-section">
                         <mat-progress-bar
                             class="example-margin"
                             [color]="color"
                             [mode]="mode"
-                            [value]="value"
-                            [bufferValue]="bufferValue">
+                            [value]="fortnightlyPulseProgress"
+                            aria-valuemax="fortnightlyPulseValueMax">
                         </mat-progress-bar>
-                        <!-- <span style="position: absolute; padding: 10px; color: white;">5</span> -->
-                    </p>
+                        <div style="position: absolute; padding: 10px; color: white; font-size: 12px;    text-align: right;" [style.width]="((fortnightlyPulseProgress/100*10) + 1) + '%'"> {{fortnightlyPulseValue}} </div>
+                    </div>
                     <p class="m-b-5"><span class="red-color">-1 </span>vs previous</p>
                 </div>
             </div>

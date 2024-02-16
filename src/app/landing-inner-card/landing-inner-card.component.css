@@ -87,22 +87,9 @@
     --mdc-linear-progress-active-indicator-height: 18px !important;
     --mdc-linear-progress-track-height: 19px !important;
 }
-.mdc-linear-progress__bar-inner{
-    border-radius: 5px !important;
-}
 .mdc-linear-progress{
     border-radius: 5px !important;
 }
-.example-section {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    height: 60px;
-  }
-  
-  .mat-progress-bar {
-    height: 30px;
-  }
   .outer-green-color{
     background-color: 
     #CCFFEF;
@@ -145,4 +132,21 @@
   font-size: 14px;
   line-height: 20px;
   color:#737373;
+}
+
+
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  /* height: 60px; */
+}
+
+.mat-progress-bar {
+  height: 30px;
 }

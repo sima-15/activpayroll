@@ -1,0 +1,50 @@
+.e-schedule:not(.e-device) .e-agenda-view .e-content-wrap table td:first-child {
+    width: 90px;
+  }
+  .e-schedule .e-agenda-view .e-resource-column {
+    width: 100px;
+  }
+  
+  .e-schedule .template-wrap .monthlypayroll {
+    background-image: url('../../assets/image/warning-red-icon.png');
+  }
+  
+  /* .e-schedule .template-wrap .weeklypayroll {
+    background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/robert.png');
+  }
+  
+  .e-schedule .template-wrap .laura {
+    background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/laura.png');
+  } */
+  
+  .e-schedule .template-wrap .margaret {
+    background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/margaret.png');
+  }
+  
+  .e-schedule .template-wrap .monthlypayroll,
+  .e-schedule .template-wrap .weeklypayroll,
+  .e-schedule .template-wrap .laura,
+  .e-schedule .template-wrap .margaret {
+    width: 24px;
+    height: 21px;
+    background-size: 23px;
+    background-repeat: no-repeat;
+  }
+  
+  .e-schedule .template-wrap {
+      display: flex;
+      text-align: left;
+  }
+  
+  
+  .e-schedule .template-wrap .resource-details {
+      padding-left: 10px;
+  }
+  
+  .e-schedule .template-wrap .resource-details .resource-designation {
+    padding-top: 10px;
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
