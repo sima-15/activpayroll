@@ -1,5 +1,5 @@
 // src/app/user-table/user-table.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-view',
@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class UserViewComponent implements OnInit {
   displayedColumns: string[] = ['userName', ...Array.from({ length: 14 }, (_, i) => 'day' + i)];
   dataSource: any = [];
-
+count: number = 0;
+showTask: boolean = true;
   days: string[] = [];
   // user: any = [
   //   { name: 'User 1', image: 'https://placekitten.com/30/30', group: 'group1', tasks: [] },
@@ -26,72 +27,30 @@ export class UserViewComponent implements OnInit {
 
   user: any = [
     {
-        "name": "User 1",
-        "image": "https://placekitten.com/30/30",
+        "name": "Canada",
+        "image": "../assets/image/canada-flag.png",
         "group": "group1",
-        "tasks": [
-            {
-                "name": "Collate",
-                "color": "#FF5733",
-                "startDate": "2024-02-17T17:02:20.018Z",
-                "endDate": "2024-02-19T17:02:20.018Z"
-            },
-            {
-                "name": "Collate",
-                "color": "#33FF57",
-                "startDate": "2024-02-06T17:02:20.018Z",
-                "endDate": "2024-02-08T17:02:20.018Z"
-            }
-        ]
+        "isGroupItem": true,
+        "tasks":[]
     },
     {
-        "name": "User 2",
-        "image": "https://placekitten.com/30/30",
+        "name": "Production Staff",
+        "image": "",
         "group": "group1",
+        "isGroupItem": true,
+        "tasks": []
+    },
+    {
+        "name": "Monthly Payroll",
+        "image": "../assets/image/warning-red-icon.png",
+        "group": "group1",
+        "isGroupItem": false,
         "tasks": [
             {
                 "name": "Collate",
-                "color": "#FF5733",
-                "startDate": "2024-02-11T17:02:20.018Z",
-                "endDate": "2024-02-14T17:02:20.018Z"
-            },
-            {
-                "name": "Process",
-                "color": "#33FF57",
-                "startDate": "2024-02-12T17:02:20.018Z",
-                "endDate": "2024-02-13T17:02:20.018Z"
-            }
-        ]
-    },
-    {
-        "name": "User 3",
-        "image": "https://placekitten.com/30/30",
-        "group": "group1",
-        "tasks": [
-            {
-                "name": "Validate",
-                "color": "#FF5733",
-                "startDate": "2024-02-16T17:02:20.018Z",
-                "endDate": "2024-02-19T17:02:20.018Z"
-            },
-            {
-                "name": "Review",
-                "color": "#33FF57",
-                "startDate": "2024-02-06T17:02:20.018Z",
-                "endDate": "2024-02-19T17:02:20.018Z"
-            }
-        ]
-    },
-    {
-        "name": "User 4",
-        "image": "https://placekitten.com/30/30",
-        "group": "group2",
-        "tasks": [
-            {
-                "name": "Collate",
-                "color": "#FF5733",
-                "startDate": "2024-02-17T17:02:20.018Z",
-                "endDate": "2024-02-18T17:02:20.018Z"
+                "color": "#FEE2E2",
+                "startDate": "2024-02-09T17:02:20.018Z",
+                "endDate": "2024-02-11T17:02:20.018Z"
             },
             {
                 "name": "Validate",
@@ -102,128 +61,149 @@ export class UserViewComponent implements OnInit {
         ]
     },
     {
-        "name": "User 5",
-        "image": "https://placekitten.com/30/30",
+        "name": "Fortnightly Payroll",
+        "image": "",
         "group": "group2",
+        "isGroupItem": false,
         "tasks": [
             {
                 "name": "Pay",
-                "color": "#FF5733",
+                "color": "#FEE2E2",
                 "startDate": "2024-02-06T17:02:20.018Z",
                 "endDate": "2024-02-07T17:02:20.018Z"
             },
             {
                 "name": "Report",
-                "color": "#33FF57",
+                "color": "#FEE2E2",
                 "startDate": "2024-02-07T17:02:20.018Z",
                 "endDate": "2024-02-13T17:02:20.018Z"
             },
             {
                 "name": "Process",
-                "color": "#5733FF",
+                "color": "#F0F0FF",
                 "startDate": "2024-02-05T17:02:20.018Z",
                 "endDate": "2024-02-08T17:02:20.018Z"
             }
         ]
     },
     {
-        "name": "User 6",
-        "image": "https://placekitten.com/30/30",
+        "name": "Facilities Management",
+        "image": "",
+        "group": "group1",
+        "isGroupItem": true,
+        "tasks": []
+    },
+    {
+        "name": "Weekly Payroll",
+        "image": "",
         "group": "group2",
+        "isGroupItem": false,
         "tasks": [
             {
                 "name": "Collate",
-                "color": "#FF5733",
-                "startDate": "2024-02-15T17:02:20.018Z",
-                "endDate": "2024-02-17T17:02:20.018Z"
+                "color": "#FEE2E2",
+                "startDate": "2024-02-17T17:02:20.018Z",
+                "endDate": "2024-02-18T17:02:20.018Z"
             },
             {
-                "name": "Process",
-                "color": "#33FF57",
-                "startDate": "2024-02-06T17:02:20.018Z",
-                "endDate": "2024-02-07T17:02:20.018Z"
-            },
-            {
-                "name": "Review",
-                "color": "#5733FF",
-                "startDate": "2024-02-10T17:02:20.018Z",
-                "endDate": "2024-02-15T17:02:20.018Z"
+                "name": "Validate",
+                "color": "#F0F0FF",
+                "startDate": "2024-02-14T17:02:20.018Z",
+                "endDate": "2024-02-18T17:02:20.018Z"
             }
         ]
     },
+    
     {
-        "name": "User 7",
-        "image": "https://placekitten.com/30/30",
-        "group": "group3",
-        "tasks": [
-            {
-                "name": "Pay",
-                "color": "#FF5733",
-                "startDate": "2024-02-18T17:02:20.018Z",
-                "endDate": "2024-02-19T17:02:20.018Z"
-            },
-            {
-                "name": "Report",
-                "color": "#33FF57",
-                "startDate": "2024-02-05T17:02:20.018Z",
-                "endDate": "2024-02-17T17:02:20.018Z"
-            }
-        ]
+        "name": "United States of America",
+        "image": "../assets/image/canada-flag.png",
+        "group": "group2",
+        "isGroupItem": true,
+        "tasks": [ ]
     },
     {
-        "name": "User 8",
-        "image": "https://placekitten.com/30/30",
-        "group": "group3",
+        "name": "Production Staff",
+        "image": "",
+        "group": "group1",
+        "isGroupItem": true,
+        "tasks": []
+    },
+    {
+        "name": "Monthly Payroll",
+        "image": "../assets/image/warning-red-icon.png",
+        "group": "group1",
+        "isGroupItem": false,
         "tasks": [
             {
-                "name": "Review",
-                "color": "#FF5733",
-                "startDate": "2024-02-11T17:02:20.018Z",
-                "endDate": "2024-02-12T17:02:20.018Z"
+                "name": "Collate",
+                "color": "#FEE2E2",
+                "startDate": "2024-02-09T17:02:20.018Z",
+                "endDate": "2024-02-13T17:02:20.018Z"
             },
             {
                 "name": "Validate",
                 "color": "#33FF57",
-                "startDate": "2024-02-11T17:02:20.018Z",
-                "endDate": "2024-02-19T17:02:20.018Z"
+                "startDate": "2024-02-14T17:02:20.018Z",
+                "endDate": "2024-02-18T17:02:20.018Z"
             }
         ]
     },
     {
-        "name": "User 9",
-        "image": "https://placekitten.com/30/30",
-        "group": "group3",
+        "name": "Fortnightly Payroll",
+        "image": "",
+        "group": "group2",
+        "isGroupItem": false,
         "tasks": [
             {
                 "name": "Pay",
-                "color": "#FF5733",
+                "color": "#FEE2E2",
+                "startDate": "2024-02-06T17:02:20.018Z",
+                "endDate": "2024-02-07T17:02:20.018Z"
+            },
+            {
+                "name": "Report",
+                "color": "#FEE2E2",
                 "startDate": "2024-02-07T17:02:20.018Z",
-                "endDate": "2024-02-17T17:02:20.018Z"
+                "endDate": "2024-02-13T17:02:20.018Z"
+            },
+            {
+                "name": "Process",
+                "color": "#F0F0FF",
+                "startDate": "2024-02-05T17:02:20.018Z",
+                "endDate": "2024-02-08T17:02:20.018Z"
             }
         ]
     },
     {
-        "name": "User 10",
-        "image": "https://placekitten.com/30/30",
-        "group": "group3",
+        "name": "Facilities Management",
+        "image": "",
+        "group": "group1",
+        "isGroupItem": true,
+        "tasks": []
+    },
+    {
+        "name": "Weekly Payroll",
+        "image": "",
+        "group": "group2",
+        "isGroupItem": false,
         "tasks": [
             {
-                "name": "Report",
-                "color": "#FF5733",
-                "startDate": "2024-02-09T17:02:20.018Z",
-                "endDate": "2024-02-12T17:02:20.018Z"
+                "name": "Collate",
+                "color": "#FEE2E2",
+                "startDate": "2024-02-17T17:02:20.018Z",
+                "endDate": "2024-02-18T17:02:20.018Z"
             },
             {
-                "name": "Review",
-                "color": "#33FF57",
-                "startDate": "2024-02-05T17:02:20.018Z",
-                "endDate": "2024-02-19T17:02:20.018Z"
+                "name": "Validate",
+                "color": "#F0F0FF",
+                "startDate": "2024-02-14T17:02:20.018Z",
+                "endDate": "2024-02-18T17:02:20.018Z"
             }
         ]
-    }
+    },
 ];
 
-  constructor() {}
+  constructor(private el: ElementRef) {}
 
   ngOnInit(): void {
     const today = new Date();
@@ -253,8 +233,38 @@ console.log("today = ", today.toString().split(' ')[0]);
 
   // src/app/user-table/user-table.component.ts
   isTaskOnDay(task: any, day: string): boolean {
+    // console.log("id = ",document.getElementById('container'));
+    // let id: any = document.getElementById('container');
+    let element: any = document.querySelector('[id^="event_"]');
+    console.log("id = ",element?.id);
+   
+    this.count = this.count + 1;
     const taskStartDate = new Date(task.startDate).toDateString();
     const taskEndDate = new Date(task.endDate).toDateString();
+
+    // console.log("taskStartDate = ",taskStartDate); //Mon Feb 05 2024
+    // console.log("taskEndDate = ",taskEndDate); //Thu Feb 08 2024
+
+    //"startDate": "2024-02-09T17:02:20.018Z",
+   // "endDate": "2024-02-13T17:02:20.018Z" Tue Feb 13 2024
+    if(element?.id) {
+       // element.style.borderRadius = '20px 20px 20px 20px';
+        if(taskStartDate == 'Fri Feb 09 2024') {
+            console.log(taskEndDate," inside taskStartDate -------------", taskStartDate)
+            // element.style.borderRadius = '20px 0 0 20px';
+            element.classList.add("leftEvent");
+            this.showTask = false;
+        } 
+        if(taskEndDate == 'Sun Feb 11 2024') {
+            console.log(taskEndDate," inside taskEndDate -------------", taskStartDate)
+            //element.style.borderRadius = '0 20px 20px 0';
+            element.classList.add("rightEvent");
+        }
+    }
+    // let td = document.getElementById('cell');
+    // if(td) {
+    //     td.setAttribute('colspan', '4');
+    // }
     return (new Date(day).toDateString() >= taskStartDate && new Date(day).toDateString() <= taskEndDate);
   }
 
@@ -316,8 +326,6 @@ console.log("today = ", today.toString().split(' ')[0]);
 }
 
 calculateRulerPosition(day: any): boolean {
-    console.log("day = ",day);
-    console.log("new Date() = ",new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }));
     const currentDate = new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
     return (day == currentDate);
 }
