@@ -21,12 +21,12 @@ export class SidenavComponent {
   }
 
   public routeLinks = [
-    { link: "payroll", name: "Payroll", icon: "home" },
-    { link: "scheduler", name: "Files", icon: "document-duplicate" },
-    {  link: "payroll_upcoming", name: "Report", icon: "clipboard-list"},
-    {  link: "authform", name: "ePay", icon: "credit-card"},
-    {  link: "landing-page", name: "Performance", icon: "document-duplicate"},
-    {  link: "syncscheduler", name: "Settings", icon: "document-duplicate"}
+    { link: "payroll", name: "Admin Payroll", icon: "home" },
+    {  link: "landing-page", name: "Client Payroll View", icon: "document-duplicate"},
+    {  link: "authform", name: "Auth Form", icon: "credit-card"},
+    {  link: "payroll_upcoming", name: "Kanban View", icon: "clipboard-list"},
+    { link: "scheduler", name: "Kendo Scheduler", icon: "document-duplicate" },        
+    {  link: "syncscheduler", name: "Syncfusion Scheduler", icon: "document-duplicate"}
   ];
 
 }
