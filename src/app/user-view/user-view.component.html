@@ -15,7 +15,7 @@
   <!-- Dynamic Task Columns -->
   <ng-container *ngFor="let day of days; let i = index" [matColumnDef]="'day' + i">
     <th class="day-cell" [style.background-color]=" isWeekend(day) ? '#F5F5F5' : ''"  [style.border]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-header-cell *matHeaderCellDef>{{ day }}</th>
-    <td id="cell" [style.border-right]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-cell *matCellDef="let user">
+    <td id="cell" [style.border-left]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" [style.border-right]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-cell *matCellDef="let user">
       <ng-template [ngIf]="user.isGroupItem" [ngIfElse]="taskItem">
         <div class="group-cell">&nbsp;</div>
       </ng-template>
