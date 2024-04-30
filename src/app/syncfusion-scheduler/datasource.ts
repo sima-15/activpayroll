@@ -6,8 +6,8 @@ export let resourceData: Object[] = [
     {
         Id: 1,
         Subject: 'Workflow Analysis',
-        StartTime: new Date(2024, 3, 1, 9, 30),
-        EndTime: new Date(2024, 3, 1, 12, 0),
+        StartTime: new Date(2024, 3, 1, 0, 0),
+        EndTime: new Date(2024, 3, 1, 0, 0),
         IsAllDay: false,
         ProjectId: 1,
         TaskId: 2,
@@ -15,16 +15,16 @@ export let resourceData: Object[] = [
     }, {
         Id: 2,
         Subject: 'Requirement planning',
-        StartTime: new Date(2024, 3, 1, 12, 30),
-        EndTime: new Date(2024, 3, 1, 14, 45),
+        StartTime: new Date(2024, 3, 1, 0, 0),
+        EndTime: new Date(2024, 3, 1, 0, 0),
         IsAllDay: false,
         ProjectId: 1,
         TaskId: 1
     }, {
         Id: 3,
         Subject: 'Quality Analysis',
-        StartTime: new Date(2024, 3, 2, 10, 0),
-        EndTime: new Date(2024, 3, 2, 12, 30),
+        StartTime: new Date(2024, 3, 2, 0, 0),
+        EndTime: new Date(2024, 3, 2, 0, 0),
         IsAllDay: false,
         ProjectId: 1,
         TaskId: 1

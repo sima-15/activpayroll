@@ -3,13 +3,16 @@ table.fixed {
   table-layout: fixed;
 }
 
-table.fixed td, th {
+table.fixed td,
+th {
   overflow: hidden;
   height: 30px;
 }
+
 tr {
   height: 40px;
 }
+
 .mat-row,
 .mat-header-row {
   height: 50px;
@@ -56,6 +59,7 @@ th:not(:first-child) {
   min-width: 70px;
   max-width: 70px;
 }
+
 .task {
   height: 35px;
   display: flex;
@@ -63,7 +67,7 @@ th:not(:first-child) {
   justify-content: center;
   /* padding: 2px; */
   /* margin: 2px; */
-  /* border-radius: 4px; */
+  /* border-radius: 20px; */
   /* overflow: hidden; */
   /* white-space: nowrap; */
   /* text-overflow: ellipsis; */
@@ -122,4 +126,18 @@ table tr th:nth-child(1) {
 
 .rightEvent {
   border-radius: 0 20px 20px 0;
+}
+
+.singleDayEvent {
+  border-radius: 20px;
+}
+
+.Weekly {
+  .task {
+    height: 22px;
+  }
+
+  td {
+    vertical-align: top;
+  }
 }
