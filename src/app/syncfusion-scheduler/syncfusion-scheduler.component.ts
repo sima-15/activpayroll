@@ -13,7 +13,7 @@ import { timelineResourceData, resourceData } from './datasource';
  providers: [TimelineViewsService, AgendaService, ResizeService, DragAndDropService]
 })
 export class SyncfusionSchedulerComponent {
-  public selectedDate: Date = new Date(2024, 3, 4);
+  public selectedDate: Date = new Date();
   scheduleObj: any;
   public group: GroupModel = {
     resources: ['Projects', 'Categories']
@@ -35,7 +35,6 @@ export class SyncfusionSchedulerComponent {
   public eventSettings: EventSettingsModel = {
     dataSource: <Object[]>extend([], resourceData.concat(timelineResourceData), null, true)
   };
-  public rowAutoHeight: boolean = true;
 
   getEmployeeName(value: ResourceDetails | TreeViewArgs): string {
     return ((value as ResourceDetails).resourceData) ?
