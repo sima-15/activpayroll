@@ -11,12 +11,12 @@
 }
 
 .e-schedule .template-wrap .weeklypayroll {
-    background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/robert.png');
-  }
-  
-  .e-schedule .template-wrap .laura {
-    background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/laura.png');
-  }
+  background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/robert.png');
+}
+
+.e-schedule .template-wrap .laura {
+  background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/laura.png');
+}
 
 .e-schedule .template-wrap .margaret {
   background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/margaret.png');
@@ -49,7 +49,7 @@
   font-weight: 500;
 }
 
-:host ::ng-deep .e-schedule .e-timeline-view .e-appointment{
+:host ::ng-deep .e-schedule .e-timeline-view .e-appointment {
   border-radius: 20px !important;
   pointer-events: none;
   text-wrap: balance;
@@ -64,25 +64,36 @@
   text-align: center;
 }
 
-:host ::ng-deep .e-schedule .e-timeline-view .e-appointment .e-appointment-details .e-inner-wrap{
+:host ::ng-deep .e-schedule .e-timeline-view .e-appointment .e-appointment-details .e-inner-wrap {
   align-content: center;
 }
-.date-text{
-  font-weight: 600;
-  font-size: 15px;
+
+.date-text {
+  font-weight: 500;
+  font-size: 11px;
   text-wrap: balance;
 }
 
-:host ::ng-deep .e-schedule .e-timeline-view .e-date-header-wrap table td.e-current-day{
+:host ::ng-deep .e-schedule .e-timeline-view .e-date-header-wrap table td.e-current-day {
   color: #4143E7;
   border: 1.5px solid #4143E7;
 }
-:host ::ng-deep .e-schedule .e-timeline-view .e-resource-tree-icon{
-  display:none;
+
+:host ::ng-deep .e-schedule .e-timeline-view .e-resource-tree-icon {
+  display: none;
 }
-.e-current-day-indicator {
-  background: #4143E7;
+
+:host ::ng-deep .e-work-cells.e-work-hours.current-date {
+  border: 1px solid #4143E7;
   margin: auto;
   height: 100%;
   width: 2px;
+}
+
+:host ::ng-deep .e-schedule .e-timeline-view .e-date-header-wrap table tbody td, .e-schedule .e-timeline-month-view .e-date-header-wrap table tbody td {
+  padding: 8px;
+}
+
+:host ::ng-deep .e-schedule .e-timeline-view .e-resource-cells.e-parent-node {
+  border-top: 1px solid black;
 }

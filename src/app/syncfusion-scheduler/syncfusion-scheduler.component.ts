@@ -11,9 +11,7 @@ import {
   TimeScaleModel,
   EventRenderedArgs,
   ScheduleComponent,
-  getWeekNumber,
-  getWeekLastDate,
-  CellTemplateArgs,
+  RenderCellEventArgs,
 } from '@syncfusion/ej2-angular-schedule';
 import { Internationalization } from '@syncfusion/ej2-base';
 import { timelineResourceData, resourceData } from './datasource';
@@ -24,9 +22,9 @@ import { timelineResourceData, resourceData } from './datasource';
   styleUrls: ['./syncfusion-scheduler.component.css'],
   providers: [TimelineViewsService, ResizeService, DragAndDropService],
 })
-export class SyncfusionSchedulerComponent implements OnInit {
+export class SyncfusionSchedulerComponent {
   public selectedDate: Date = new Date(
-    new Date().setDate(new Date().getDate() - 4)
+    new Date().setDate(new Date().getDate() - 6)
   );
   @ViewChild('scheduleObj', { static: false })
   public scheduleObj: ScheduleComponent;
@@ -34,9 +32,6 @@ export class SyncfusionSchedulerComponent implements OnInit {
     resources: ['Projects', 'Categories'],
   };
 
-  ngOnInit(): void {
-    console.log(this.selectedDate);
-  }
   public projectDataSource: Object[] = [
     { text: 'Canada', name: 'Canada', id: 1, color: '#cb6bb2' },
     {
@@ -117,4 +112,18 @@ export class SyncfusionSchedulerComponent implements OnInit {
   getDateHeaderText: Function = (value: Date) => {
     return this.instance.formatDate(value, { skeleton: 'MMMEd' });
   };
+
+  public onRenderCell(args: RenderCellEventArgs): void {
+    if (args.elementType === 'resourceGroupCells') {
+      (args.element as any).style.borderTop = "1px solid #737373";
+    }
+    if ((args.elementType === 'workCells' || args.elementType === 'resourceGroupCells') && args.date) {
+      var cellDate = new Date(args.date.getTime());
+      var date = new Date(cellDate.setHours(0, 0, 0));
+      if (date.getTime() === new Date().setHours(0, 0, 0, 0)) {
+        (args.element as any).style.borderLeft= '1px solid #4143E7';
+        (args.element as any).style.borderRight= '1px solid #4143E7';
+      }
+    }
+  }
 }
