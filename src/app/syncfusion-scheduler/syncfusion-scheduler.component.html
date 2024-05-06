@@ -1,6 +1,7 @@
 <div class="control-section">
 	<div class="col-lg-12 content-wrapper">
-		<ejs-schedule #scheduleObj  [selectedDate]="selectedDate" [group]="group"
+		<ejs-schedule #scheduleObj  [selectedDate]="selectedDate" [group]="group" currentView="TimelineWeek"
+		[showHeaderBar]='false'
 			[eventSettings]="eventSettings" [timeScale]="timeScale" (eventRendered)="oneventRendered($event)">
 			<e-resources>
 				<e-resource field='ProjectId' title='Choose Project' [dataSource]='projectDataSource'
@@ -11,6 +12,9 @@
 					groupIDField='groupId' colorField='color'>
 				</e-resource>
 			</e-resources>
+			<ng-template #dateHeaderTemplate let-data>
+				<div class="date-text" [innerHTML]="getDateHeaderText(data.date)"></div>
+			</ng-template>
 			<ng-template #resourceHeaderTemplate let-data>
 				<div class='template-wrap'>
 					<div class="{{getEmployeeImage(data)}}"></div>
@@ -21,8 +25,7 @@
 				</div>
 			</ng-template>
 			<e-views>
-				<e-view option="TimelineDay"></e-view>
-				<e-view option="TimelineWeek"></e-view>
+				<e-view option="TimelineWeek" interval="2" dateFormat='dd-MM-yyyy' [readonly]="isReadOnly"></e-view>
 			</e-views>
 		</ejs-schedule>
 	</div>

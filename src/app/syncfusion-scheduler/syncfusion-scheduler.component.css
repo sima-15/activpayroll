@@ -10,13 +10,13 @@
   background-image: url('../../assets/image/warning-red-icon.png');
 }
 
-/* .e-schedule .template-wrap .weeklypayroll {
+.e-schedule .template-wrap .weeklypayroll {
     background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/robert.png');
   }
   
   .e-schedule .template-wrap .laura {
     background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/laura.png');
-  } */
+  }
 
 .e-schedule .template-wrap .margaret {
   background-image: url('https://ej2.syncfusion.com/demos/src/schedule/images/margaret.png');
@@ -52,6 +52,9 @@
 :host ::ng-deep .e-schedule .e-timeline-view .e-appointment,
 .e-schedule .e-timeline-month-view .e-appointment {
   border-radius: 20px !important;
+  pointer-events: none;
+  text-wrap: balance;
+  font-weight: 200;
 }
 
 :host ::ng-deep.e-appointment-details .e-time {
@@ -66,4 +69,23 @@
 :host ::ng-deep .e-schedule .e-timeline-view .e-appointment .e-appointment-details .e-inner-wrap,
 .e-schedule .e-timeline-month-view .e-appointment .e-appointment-details .e-inner-wrap {
   align-content: center;
+}
+.date-text{
+  font-weight: 600;
+  font-size: 15px;
+  text-wrap: balance;
+}
+
+:host ::ng-deep .e-schedule .e-timeline-view .e-date-header-wrap table td.e-current-day, .e-schedule .e-timeline-month-view .e-date-header-wrap table td.e-current-day{
+  color: #4143E7;
+  border: 1.5px solid #4143E7;
+}
+:host ::ng-deep .e-schedule .e-timeline-view .e-resource-tree-icon{
+  display:none;
+}
+.e-current-day-indicator {
+  background: #4143E7;
+  margin: auto;
+  height: 100%;
+  width: 2px;
 }

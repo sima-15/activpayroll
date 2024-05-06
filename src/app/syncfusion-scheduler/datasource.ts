@@ -14,7 +14,7 @@ export let resourceData: Object[] = [
         CategoryColor: "#7fa900"
     }, {
         Id: 2,
-        Subject: 'Requirement planning',
+        Subject: 'process',
         StartTime: new Date(2024, 3, 1, 0, 0),
         EndTime: new Date(2024, 3, 1, 0, 0),
         IsAllDay: false,
@@ -22,7 +22,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 3,
-        Subject: 'Quality Analysis',
+        Subject: 'Data input',
         StartTime: new Date(2024, 3, 2, 0, 0),
         EndTime: new Date(2024, 3, 2, 0, 0),
         IsAllDay: false,
@@ -30,7 +30,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 4,
-        Subject: 'Resource planning',
+        Subject: 'Report',
         StartTime: new Date(2024, 3, 2, 13, 0),
         EndTime: new Date(2024, 3, 2, 15, 30),
         IsAllDay: false,
@@ -38,7 +38,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 5,
-        Subject: 'Timeline estimation',
+        Subject: 'validate',
         StartTime: new Date(2024, 3, 3, 9, 0),
         EndTime: new Date(2024, 3, 3, 11, 30),
         IsAllDay: false,
@@ -46,7 +46,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 6,
-        Subject: 'Developers Meeting',
+        Subject: 'Collate',
         StartTime: new Date(2024, 3, 3, 14, 0),
         EndTime: new Date(2024, 3, 3, 16, 45),
         IsAllDay: false,
@@ -78,7 +78,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 10,
-        Subject: 'Cross-browser testing',
+        Subject: 'process',
         StartTime: new Date(2024, 3, 5, 13, 45),
         EndTime: new Date(2024, 3, 5, 16, 30),
         IsAllDay: false,
@@ -86,7 +86,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 11,
-        Subject: 'Bug Automation',
+        Subject: 'Collate',
         StartTime: new Date(2024, 3, 6, 10, 0),
         EndTime: new Date(2024, 3, 6, 12, 15),
         IsAllDay: false,
@@ -94,7 +94,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 12,
-        Subject: 'Functionality testing',
+        Subject: 'Validate',
         StartTime: new Date(2024, 3, 6, 9, 0),
         EndTime: new Date(2024, 3, 6, 11, 30),
         IsAllDay: false,
@@ -102,7 +102,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 13,
-        Subject: 'Resolution-based testing',
+        Subject: 'Report',
         StartTime: new Date(2024, 3, 7, 13, 0),
         EndTime: new Date(2024, 3, 7, 15, 15),
         IsAllDay: false,
@@ -110,7 +110,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 14,
-        Subject: 'Test report Validation',
+        Subject: 'Process',
         StartTime: new Date(2024, 3, 7, 9),
         EndTime: new Date(2024, 3, 7, 11),
         IsAllDay: false,
@@ -118,7 +118,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 15,
-        Subject: 'Test case correction',
+        Subject: 'validate',
         StartTime: new Date(2024, 3, 8, 9, 45),
         EndTime: new Date(2024, 3, 8, 11, 30),
         IsAllDay: false,
@@ -134,7 +134,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 17,
-        Subject: 'Quality Analysis',
+        Subject: 'Data input',
         StartTime: new Date(2024, 3, 9, 12),
         EndTime: new Date(2024, 3, 9, 15, 30),
         IsAllDay: false,
@@ -150,7 +150,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 19,
-        Subject: 'Exception handling',
+        Subject: 'Pay',
         StartTime: new Date(2024, 3, 10, 10, 10),
         EndTime: new Date(2024, 3, 10, 13, 30),
         IsAllDay: false,
@@ -174,7 +174,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 22,
-        Subject: 'Requirement planning',
+        Subject: 'process',
         StartTime: new Date(2024, 3, 11, 12, 30),
         EndTime: new Date(2024, 3, 11, 14, 45),
         IsAllDay: false,
@@ -182,7 +182,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 23,
-        Subject: 'Quality Analysis',
+        Subject: 'Data input',
         StartTime: new Date(2024, 3, 12, 10),
         EndTime: new Date(2024, 3, 12, 12, 30),
         IsAllDay: false,
@@ -190,7 +190,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 24,
-        Subject: 'Resource planning',
+        Subject: 'Report',
         StartTime: new Date(2024, 3, 12, 13),
         EndTime: new Date(2024, 3, 12, 14, 30),
         IsAllDay: false,
@@ -198,7 +198,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 25,
-        Subject: 'Timeline estimation',
+        Subject: 'validate',
         StartTime: new Date(2024, 3, 13, 9),
         EndTime: new Date(2024, 3, 13, 11),
         IsAllDay: false,
@@ -206,7 +206,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 26,
-        Subject: 'Developers Meeting',
+        Subject: 'Collate',
         StartTime: new Date(2024, 3, 13, 14),
         EndTime: new Date(2024, 3, 13, 15, 45),
         IsAllDay: false,
@@ -238,15 +238,15 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 30,
-        Subject: 'Cross-browser testing',
+        Subject: 'process',
         StartTime: new Date(2024, 3, 15, 14),
         EndTime: new Date(2024, 3, 15, 16, 30),
         IsAllDay: false,
         ProjectId: 2,
-        TaskId: 2
+        TaskId: 3
     }, {
         Id: 31,
-        Subject: 'Bug Automation',
+        Subject: 'Collate',
         StartTime: new Date(2024, 3, 16, 10),
         EndTime: new Date(2024, 3, 16, 11),
         IsAllDay: false,
@@ -254,7 +254,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 32,
-        Subject: 'Functionality testing',
+        Subject: 'Validate',
         StartTime: new Date(2024, 3, 16, 9),
         EndTime: new Date(2024, 3, 16, 11, 30),
         IsAllDay: false,
@@ -262,7 +262,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 33,
-        Subject: 'Resolution-based testing',
+        Subject: 'Report',
         StartTime: new Date(2024, 3, 17, 14),
         EndTime: new Date(2024, 3, 17, 15),
         IsAllDay: false,
@@ -270,7 +270,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 34,
-        Subject: 'Test report Validation',
+        Subject: 'Process',
         StartTime: new Date(2024, 3, 17, 9),
         EndTime: new Date(2024, 3, 17, 11),
         IsAllDay: false,
@@ -278,7 +278,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 35,
-        Subject: 'Test case correction',
+        Subject: 'validate',
         StartTime: new Date(2024, 3, 18, 10),
         EndTime: new Date(2024, 3, 18, 11, 30),
         IsAllDay: false,
@@ -294,7 +294,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 37,
-        Subject: 'Bug fixing',
+        Subject: 'Data input',
         StartTime: new Date(2024, 3, 9, 10),
         EndTime: new Date(2024, 3, 9, 10, 30),
         IsAllDay: false,
@@ -310,7 +310,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 39,
-        Subject: 'Exception handling',
+        Subject: 'Pay',
         StartTime: new Date(2024, 3, 20, 10),
         EndTime: new Date(2024, 3, 20, 11),
         IsAllDay: false,
@@ -334,7 +334,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 42,
-        Subject: 'Requirement planning',
+        Subject: 'process',
         StartTime: new Date(2024, 3, 21, 12, 30),
         EndTime: new Date(2024, 3, 21, 13, 45),
         IsAllDay: false,
@@ -342,7 +342,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 43,
-        Subject: 'Quality Analysis',
+        Subject: 'Data input',
         StartTime: new Date(2024, 3, 22, 10),
         EndTime: new Date(2024, 3, 22, 11, 30),
         IsAllDay: false,
@@ -350,23 +350,23 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 44,
-        Subject: 'Resource planning',
+        Subject: 'Report',
         StartTime: new Date(2024, 3, 4, 10),
         EndTime: new Date(2024, 3, 4, 12, 30),
         IsAllDay: false,
         ProjectId: 3,
-        TaskId: 2
+        TaskId: 4
     }, {
         Id: 45,
-        Subject: 'Timeline estimation',
+        Subject: 'validate',
         StartTime: new Date(2024, 3, 4, 9),
         EndTime: new Date(2024, 3, 4, 11),
         IsAllDay: false,
         ProjectId: 3,
-        TaskId: 1
+        TaskId: 4
     }, {
         Id: 46,
-        Subject: 'Developers Meeting',
+        Subject: 'Collate',
         StartTime: new Date(2024, 3, 4, 14, 30),
         EndTime: new Date(2024, 3, 4, 16, 30),
         IsAllDay: false,
@@ -398,7 +398,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 50,
-        Subject: 'Cross-browser testing',
+        Subject: 'process',
         StartTime: new Date(2024, 3, 25, 14),
         EndTime: new Date(2024, 3, 25, 15, 30),
         IsAllDay: false,
@@ -406,7 +406,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 51,
-        Subject: 'Bug Automation',
+        Subject: 'Collate',
         StartTime: new Date(2024, 3, 26, 10),
         EndTime: new Date(2024, 3, 26, 11),
         IsAllDay: false,
@@ -414,7 +414,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 52,
-        Subject: 'Functionality testing',
+        Subject: 'Validate',
         StartTime: new Date(2024, 3, 26, 9),
         EndTime: new Date(2024, 3, 26, 11, 30),
         IsAllDay: false,
@@ -422,7 +422,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 53,
-        Subject: 'Resolution-based testing',
+        Subject: 'Report',
         StartTime: new Date(2024, 3, 27, 14),
         EndTime: new Date(2024, 3, 27, 15),
         IsAllDay: false,
@@ -430,7 +430,7 @@ export let resourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 54,
-        Subject: 'Test report Validation',
+        Subject: 'Process',
         StartTime: new Date(2024, 3, 27, 9),
         EndTime: new Date(2024, 3, 27, 11),
         IsAllDay: false,
@@ -438,7 +438,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 55,
-        Subject: 'Test case correction',
+        Subject: 'validate',
         StartTime: new Date(2024, 3, 28, 10),
         EndTime: new Date(2024, 3, 28, 11, 30),
         IsAllDay: false,
@@ -454,7 +454,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 57,
-        Subject: 'Bug fixing',
+        Subject: 'Data input',
         StartTime: new Date(2024, 3, 29, 12),
         EndTime: new Date(2024, 3, 29, 12, 30),
         IsAllDay: false,
@@ -470,7 +470,7 @@ export let resourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 59,
-        Subject: 'Exception handling',
+        Subject: 'Pay',
         StartTime: new Date(2024, 3, 30, 10),
         EndTime: new Date(2024, 3, 30, 11),
         IsAllDay: false,
@@ -498,7 +498,7 @@ export let timelineResourceData: Object[] = [
         TaskId: 2
     }, {
         Id: 62,
-        Subject: 'Bug Automation',
+        Subject: 'Collate',
         StartTime: new Date(2024, 3, 4, 16, 0),
         EndTime: new Date(2024, 3, 4, 20, 0),
         IsAllDay: false,
@@ -506,7 +506,7 @@ export let timelineResourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 63,
-        Subject: 'Functionality testing',
+        Subject: 'Validate',
         StartTime: new Date(2024, 3, 4, 9),
         EndTime: new Date(2024, 3, 4, 10, 30),
         IsAllDay: false,
@@ -515,7 +515,7 @@ export let timelineResourceData: Object[] = [
         CategoryColor: "#7fa900"
     }, {
         Id: 64,
-        Subject: 'Resolution-based testing',
+        Subject: 'Report',
         StartTime: new Date(2024, 3, 4, 12),
         EndTime: new Date(2024, 3, 4, 15, 0),
         IsAllDay: false,
@@ -523,7 +523,7 @@ export let timelineResourceData: Object[] = [
         TaskId: 4
     }, {
         Id: 65,
-        Subject: 'Test report Validation',
+        Subject: 'Process',
         StartTime: new Date(2024, 3, 4, 15),
         EndTime: new Date(2024, 3, 4, 18),
         IsAllDay: false,
@@ -531,7 +531,7 @@ export let timelineResourceData: Object[] = [
         TaskId: 1
     }, {
         Id: 66,
-        Subject: 'Test case correction',
+        Subject: 'validate',
         StartTime: new Date(2024, 3, 4, 14),
         EndTime: new Date(2024, 3, 4, 16),
         IsAllDay: false,
@@ -539,7 +539,7 @@ export let timelineResourceData: Object[] = [
         TaskId: 6
     }, {
         Id: 67,
-        Subject: 'Bug fixing',
+        Subject: 'Data input',
         StartTime: new Date(2024, 3, 4, 14, 30),
         EndTime: new Date(2024, 3, 4, 18, 30),
         IsAllDay: false,
@@ -555,7 +555,7 @@ export let timelineResourceData: Object[] = [
         TaskId: 4
     }, {
         Id: 70,
-        Subject: 'Bug Automation',
+        Subject: 'Collate',
         StartTime: new Date(2024, 3, 4, 16, 0),
         EndTime: new Date(2024, 3, 5, 20, 0),
         IsAllDay: false,
