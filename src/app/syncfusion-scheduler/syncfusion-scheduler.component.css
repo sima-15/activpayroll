@@ -49,8 +49,7 @@
   font-weight: 500;
 }
 
-:host ::ng-deep .e-schedule .e-timeline-view .e-appointment,
-.e-schedule .e-timeline-month-view .e-appointment {
+:host ::ng-deep .e-schedule .e-timeline-view .e-appointment{
   border-radius: 20px !important;
   pointer-events: none;
   text-wrap: balance;
@@ -61,13 +60,11 @@
   display: none !important;
 }
 
-:host ::ng-deep .e-schedule .e-timeline-view .e-appointment .e-appointment-details,
-.e-schedule .e-timeline-month-view .e-appointment .e-appointment-details {
+:host ::ng-deep .e-schedule .e-timeline-view .e-appointment .e-appointment-details {
   text-align: center;
 }
 
-:host ::ng-deep .e-schedule .e-timeline-view .e-appointment .e-appointment-details .e-inner-wrap,
-.e-schedule .e-timeline-month-view .e-appointment .e-appointment-details .e-inner-wrap {
+:host ::ng-deep .e-schedule .e-timeline-view .e-appointment .e-appointment-details .e-inner-wrap{
   align-content: center;
 }
 .date-text{
@@ -76,7 +73,7 @@
   text-wrap: balance;
 }
 
-:host ::ng-deep .e-schedule .e-timeline-view .e-date-header-wrap table td.e-current-day, .e-schedule .e-timeline-month-view .e-date-header-wrap table td.e-current-day{
+:host ::ng-deep .e-schedule .e-timeline-view .e-date-header-wrap table td.e-current-day{
   color: #4143E7;
   border: 1.5px solid #4143E7;
 }
