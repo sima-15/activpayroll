@@ -14,7 +14,7 @@ import {
   RenderCellEventArgs,
 } from '@syncfusion/ej2-angular-schedule';
 import { Internationalization } from '@syncfusion/ej2-base';
-import { timelineResourceData, resourceData } from './datasource';
+import { resourceData } from './datasource';
 
 @Component({
   selector: 'app-syncfusion-scheduler',
@@ -78,9 +78,7 @@ export class SyncfusionSchedulerComponent {
   public showHeaderBar: Boolean = false;
   public allowMultiple: Boolean = true;
   public eventSettings: EventSettingsModel = {
-    dataSource: <Object[]>(
-      extend([], resourceData.concat(timelineResourceData), null, true)
-    ),
+    dataSource:resourceData
   };
 
   getEmployeeName(value: ResourceDetails | TreeViewArgs): string {
