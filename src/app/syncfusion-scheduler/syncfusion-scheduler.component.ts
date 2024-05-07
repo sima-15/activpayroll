@@ -29,10 +29,10 @@ export class SyncfusionSchedulerComponent {
   @ViewChild('scheduleObj', { static: false })
   public scheduleObj: ScheduleComponent;
   public group: GroupModel = {
-    resources: ['Projects', 'Categories'],
+    resources: ['Countries', 'Payrolls'],
   };
 
-  public projectDataSource: Object[] = [
+  public CountriesDataSource: Object[] = [
     { text: 'Canada', name: 'Canada', id: 1, color: '#cb6bb2' },
     {
       text: 'United States of America',
@@ -42,7 +42,7 @@ export class SyncfusionSchedulerComponent {
     },
     { text: 'Australia', name: 'Australia', id: 3, color: '#df5286' },
   ];
-  public categoryDataSource: Object[] = [
+  public PayrollsDataSource: Object[] = [
     {
       text: 'monthlypayroll',
       name: 'Monthly Payroll',
