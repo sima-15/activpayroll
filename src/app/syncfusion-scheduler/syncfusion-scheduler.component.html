@@ -1,11 +1,11 @@
 <div class="control-section">
 	<div class="col-lg-12 content-wrapper" *ngIf="isAdmin">
-		<ejs-schedule #scheduleObj [selectedDate]="selectedDate" [group]="group"
+		<ejs-schedule #scheduleObj [selectedDate]="selectedDate" [group]="group" width="930px"
 			currentView="TimelineWeek" [showHeaderBar]='false' (renderCell)="onRenderCell($event)"
 			[eventSettings]="eventSettings" [timeScale]="timeScale" (eventRendered)="oneventRendered($event)">
 			<e-resources>
 				<e-resource field='CompanyId' [dataSource]='CompanyDataSource' [allowMultiple]='allowMultiple'
-				 name='Companies' textField='text' idField='id' cssClassField='cssClass'>
+				 name='Companies' textField='text' idField='id'>
 				</e-resource>
 				<e-resource field='CountryId' [dataSource]='CountriesDataSource' [allowMultiple]='allowMultiple'
 					name='Countries' textField='text' idField='id' groupIDField='groupId'>
@@ -17,12 +17,12 @@
 			<ng-template #dateHeaderTemplate let-data>
 				<div class="date-text" [innerHTML]="getDateHeaderText(data.date)"></div>
 			</ng-template>
-			<!-- <ng-template #resourceHeaderTemplate let-data>
+			<ng-template #resourceHeaderTemplate let-data>
 				<div class='company-wrap'>
 					<div class="{{getCountryImage(data)}}"></div>
 					<div class="company-name">{{data.resourceData.name}}</div>
 				</div>
-			</ng-template> -->
+			</ng-template>
 			<e-views>
 				<e-view option="TimelineWeek" interval="2" dateFormat='dd-MM-yyyy' [readonly]="isReadOnly"></e-view>
 			</e-views>

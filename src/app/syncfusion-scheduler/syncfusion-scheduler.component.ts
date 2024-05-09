@@ -1,4 +1,4 @@
-import { AfterViewInit, Component,  ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import {
   TimelineViewsService,
   GroupModel,
@@ -12,7 +12,7 @@ import {
   ScheduleComponent,
   RenderCellEventArgs,
 } from '@syncfusion/ej2-angular-schedule';
-import { Internationalization } from '@syncfusion/ej2-base';
+import { Internationalization ,createElement} from '@syncfusion/ej2-base';
 import { resourceData, CLresourceData } from './datasource';
 
 @Component({
@@ -43,18 +43,16 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
 
   public CompanyDataSource: Object[] = [
     {
-      text: 'Test Comapny 1',
-      name: 'Test Comapny 1',
+      text: 'Microsoft',
+      name: 'Microsoft',
       id: 1,
       color: '#cb6bb2',
-      cssClass: 'customCompany'
     },
     {
-      text: 'Test Comapny 2',
-      name: 'Test Comapny 2',
+      text: 'Google',
+      name: 'Google',
       id: 2,
       color: '#cb6bb2',
-      cssClass: 'customCompany',
     },
   ];
 
@@ -65,7 +63,13 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
       id: 1,
       color: '#cb6bb2',
       groupId: 1,
-      cssClass: 'custom-country',
+    },
+    {
+      text: 'Abhi',
+      name: 'Abhi',
+      id: 3,
+      color: '#df5286',
+      groupId: 1,
     },
     {
       text: 'Australia',
@@ -73,7 +77,6 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
       id: 3,
       color: '#df5286',
       groupId: 2,
-      cssClass: 'custom-country',
     },
   ];
 
@@ -144,11 +147,14 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
   };
 
   public onRenderCell(args: RenderCellEventArgs): void {
-console.log(args.name);
-    if(args.name === 'Companies'){
-      console.log(args);
-      (args.element as any).style.borderTop = '1px solid red';
-    }
+    let groupIndex;
+    // if(args.elementType === 'resourceHeader'){
+    //   if( this.cary.includes(args.element.ariaLabel?.replace(' resource',''))){
+    //     groupIndex=args.groupIndex;
+    //     (args.element as any).style.borderTop = '1px solid #737373';
+    //   }
+    // }
+
     if (args.elementType === 'resourceGroupCells') {
       (args.element as any).style.borderTop = '1px solid #737373';
     }
@@ -170,5 +176,13 @@ console.log(args.name);
         (args.element as any).style.borderRight = '1px solid #4143E7';
       }
     }
-  }
+    if (args.elementType == 'emptyCells') {
+        let ele: HTMLElement = createElement('div', {
+          innerHTML: "<b>Payrolls</b>",
+          styles:'padding-left:15px'
+        });
+        (args.element).appendChild(ele);
+      }
+    }
+  
 }
