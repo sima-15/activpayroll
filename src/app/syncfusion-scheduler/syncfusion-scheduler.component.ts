@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
-import { extend } from '@syncfusion/ej2-base';
+import { AfterViewInit, Component,  ViewChild } from '@angular/core';
 import {
   TimelineViewsService,
   GroupModel,
@@ -14,7 +13,7 @@ import {
   RenderCellEventArgs,
 } from '@syncfusion/ej2-angular-schedule';
 import { Internationalization } from '@syncfusion/ej2-base';
-import { resourceData } from './datasource';
+import { resourceData, CLresourceData } from './datasource';
 
 @Component({
   selector: 'app-syncfusion-scheduler',
@@ -22,26 +21,63 @@ import { resourceData } from './datasource';
   styleUrls: ['./syncfusion-scheduler.component.css'],
   providers: [TimelineViewsService, ResizeService, DragAndDropService],
 })
-export class SyncfusionSchedulerComponent {
+export class SyncfusionSchedulerComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+  }
+  isAdmin = true;
+
   public selectedDate: Date = new Date(
     new Date().setDate(new Date().getDate() - 6)
   );
+
   @ViewChild('scheduleObj', { static: false })
   public scheduleObj: ScheduleComponent;
+  public instance: Internationalization = new Internationalization();
   public group: GroupModel = {
+    resources: ['Companies', 'Countries', 'Payrolls'],
+  };
+
+  public clgroup: GroupModel = {
     resources: ['Countries', 'Payrolls'],
   };
 
-  public CountriesDataSource: Object[] = [
-    { text: 'Canada', name: 'Canada', id: 1, color: '#cb6bb2' },
+  public CompanyDataSource: Object[] = [
     {
-      text: 'United States of America',
-      name: 'United States of America',
-      id: 2,
-      color: '#56ca85',
+      text: 'Test Comapny 1',
+      name: 'Test Comapny 1',
+      id: 1,
+      color: '#cb6bb2',
+      cssClass: 'customCompany'
     },
-    { text: 'Australia', name: 'Australia', id: 3, color: '#df5286' },
+    {
+      text: 'Test Comapny 2',
+      name: 'Test Comapny 2',
+      id: 2,
+      color: '#cb6bb2',
+      cssClass: 'customCompany',
+    },
   ];
+
+  public CountriesDataSource: Object[] = [
+    {
+      text: 'Canada',
+      name: 'Canada',
+      id: 1,
+      color: '#cb6bb2',
+      groupId: 1,
+      cssClass: 'custom-country',
+    },
+    {
+      text: 'Australia',
+      name: 'Australia',
+      id: 3,
+      color: '#df5286',
+      groupId: 2,
+      cssClass: 'custom-country',
+    },
+  ];
+
+
   public PayrollsDataSource: Object[] = [
     {
       text: 'monthlypayroll',
@@ -78,10 +114,10 @@ export class SyncfusionSchedulerComponent {
   public showHeaderBar: Boolean = false;
   public allowMultiple: Boolean = true;
   public eventSettings: EventSettingsModel = {
-    dataSource:resourceData
+    dataSource: resourceData,
   };
 
-  getEmployeeName(value: ResourceDetails | TreeViewArgs): string {
+  getCountryName(value: ResourceDetails | TreeViewArgs): string {
     return (value as ResourceDetails).resourceData
       ? ((value as ResourceDetails).resourceData[
           (value as ResourceDetails).resource.textField
@@ -89,8 +125,8 @@ export class SyncfusionSchedulerComponent {
       : (value as TreeViewArgs).resourceName;
   }
 
-  getEmployeeImage(value: ResourceDetails | TreeViewArgs): string {
-    let resourceName: string = this.getEmployeeName(value);
+  getCountryImage(value: ResourceDetails | TreeViewArgs): string {
+    let resourceName: string = this.getCountryName(value);
     return resourceName.replace(' ', '-').toLowerCase();
   }
 
@@ -99,28 +135,39 @@ export class SyncfusionSchedulerComponent {
     if (!args.element || !categoryColor) {
       return;
     }
-    // if (this.scheduleObj.currentView === 'Agenda') {
-    //     (args.element.firstChild as HTMLElement).style.borderLeftColor = categoryColor;
-    // } else {
     args.element.style.backgroundColor = categoryColor;
-    // }
+    
   }
 
-  public instance: Internationalization = new Internationalization();
   getDateHeaderText: Function = (value: Date) => {
     return this.instance.formatDate(value, { skeleton: 'MMMEd' });
   };
 
   public onRenderCell(args: RenderCellEventArgs): void {
-    if (args.elementType === 'resourceGroupCells') {
-      (args.element as any).style.borderTop = "1px solid #737373";
+console.log(args.name);
+    if(args.name === 'Companies'){
+      console.log(args);
+      (args.element as any).style.borderTop = '1px solid red';
     }
-    if ((args.elementType === 'workCells' || args.elementType === 'resourceGroupCells') && args.date) {
-      var cellDate = new Date(args.date.getTime());
-      var date = new Date(cellDate.setHours(0, 0, 0));
+    if (args.elementType === 'resourceGroupCells') {
+      (args.element as any).style.borderTop = '1px solid #737373';
+    }
+
+    if (args.elementType === 'dateHeader') {
+      if (args.date && (args.date.getDay() === 6 || args.date.getDay() === 0)) {
+        (args.element as any).style.color = '#D4D4D4';
+      }
+    }
+    if (
+      (args.elementType === 'workCells' ||
+        args.elementType === 'resourceGroupCells') &&
+      args.date
+    ) {
+      const cellDate = new Date(args.date.getTime());
+      const date = new Date(cellDate.setHours(0, 0, 0));
       if (date.getTime() === new Date().setHours(0, 0, 0, 0)) {
-        (args.element as any).style.borderLeft= '1px solid #4143E7';
-        (args.element as any).style.borderRight= '1px solid #4143E7';
+        (args.element as any).style.borderLeft = '1px solid #4143E7';
+        (args.element as any).style.borderRight = '1px solid #4143E7';
       }
     }
   }

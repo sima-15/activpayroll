@@ -93,7 +93,3 @@
 :host ::ng-deep .e-schedule .e-timeline-view .e-date-header-wrap table tbody td, .e-schedule .e-timeline-month-view .e-date-header-wrap table tbody td {
   padding: 8px;
 }
-
-:host ::ng-deep .e-schedule .e-timeline-view .e-resource-cells.e-parent-node {
-  border-top: 1px solid black;
-}
