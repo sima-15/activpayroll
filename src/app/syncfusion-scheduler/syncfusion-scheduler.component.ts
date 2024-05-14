@@ -43,14 +43,14 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
 
   public CompanyDataSource: Object[] = [
     {
-      text: 'Microsoft',
-      name: 'Microsoft',
+      text: 'Canada',
+      name: 'Canada',
       id: 1,
       color: '#cb6bb2',
     },
     {
-      text: 'Google',
-      name: 'Google',
+      text: 'Australia',
+      name: 'Australia',
       id: 2,
       color: '#cb6bb2',
     },
@@ -58,22 +58,22 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
 
   public CountriesDataSource: Object[] = [
     {
-      text: 'Canada',
-      name: 'Canada',
+      text: 'Production Stuff',
+      name: 'Production Stuff',
       id: 1,
       color: '#cb6bb2',
       groupId: 1,
     },
     {
-      text: 'Abhi',
-      name: 'Abhi',
-      id: 3,
+      text: 'Facility Management',
+      name: 'Facility Management',
+      id: 2,
       color: '#df5286',
       groupId: 1,
     },
     {
-      text: 'Australia',
-      name: 'Australia',
+      text: 'Facilities Management',
+      name: 'Facilities Management',
       id: 3,
       color: '#df5286',
       groupId: 2,
@@ -109,6 +109,20 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
       id: 4,
       groupId: 3,
       color: '#FF8B5C',
+    },
+    {
+      text: 'FortnightlyPayroll',
+      name: 'Fortnightly Payroll',
+      id: 5,
+      groupId: 3,
+      color: '#66FFD0',
+    },
+    {
+      text: 'FortnightlyPayroll',
+      name: 'Fortnightly Payroll',
+      id: 6,
+      groupId: 2,
+      color: '#66FFD0',
     },
   ];
   isReadOnly = true;
@@ -146,16 +160,19 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
     return this.instance.formatDate(value, { skeleton: 'MMMEd' });
   };
 
+  cary=this.CompanyDataSource.map((item:any)=>item.name)
+  
+   groupIndex;
   public onRenderCell(args: RenderCellEventArgs): void {
-    let groupIndex;
-    // if(args.elementType === 'resourceHeader'){
-    //   if( this.cary.includes(args.element.ariaLabel?.replace(' resource',''))){
-    //     groupIndex=args.groupIndex;
-    //     (args.element as any).style.borderTop = '1px solid #737373';
-    //   }
-    // }
 
-    if (args.elementType === 'resourceGroupCells') {
+    if(args.elementType === 'resourceHeader'){
+      if( this.cary.includes(args.element.ariaLabel?.replace(' resource',''))){
+        this.groupIndex=args.groupIndex;
+        (args.element as any).style.borderTop = '1px solid #737373';
+      }
+    }
+
+    if (args.elementType === 'resourceGroupCells' && args.groupIndex==this.groupIndex) {
       (args.element as any).style.borderTop = '1px solid #737373';
     }
 
