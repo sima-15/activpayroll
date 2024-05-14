@@ -1,6 +1,6 @@
 <div class="control-section">
 	<div class="col-lg-12 content-wrapper" *ngIf="isAdmin">
-		<ejs-schedule #scheduleObj [selectedDate]="selectedDate" [group]="group" width="940px" height="500px"
+		<ejs-schedule #scheduleObj [selectedDate]="selectedDate" [group]="group" width="950px" height="500px"
 			currentView="TimelineWeek" [showHeaderBar]='false' (renderCell)="onRenderCell($event)" rowAutoHeight="true"
 			[eventSettings]="eventSettings" [timeScale]="timeScale" (eventRendered)="oneventRendered($event)">
 			<e-resources>

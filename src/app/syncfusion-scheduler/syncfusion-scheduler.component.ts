@@ -160,19 +160,23 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
     return this.instance.formatDate(value, { skeleton: 'MMMEd' });
   };
 
-  cary=this.CompanyDataSource.map((item:any)=>item.name)
-  
-   groupIndex;
+  cary=this.CompanyDataSource.map((item:any)=>item.name);
+  conary =this.CountriesDataSource.map((item:any)=>item.name);
+  groupIndex =[];
   public onRenderCell(args: RenderCellEventArgs): void {
 
     if(args.elementType === 'resourceHeader'){
       if( this.cary.includes(args.element.ariaLabel?.replace(' resource',''))){
-        this.groupIndex=args.groupIndex;
+        this.groupIndex.push(args.groupIndex);
         (args.element as any).style.borderTop = '1px solid #737373';
+        (args.element as any).style.fontWeight ='700';
+      }
+      if( this.conary.includes(args.element.ariaLabel?.replace(' resource',''))){
+        (args.element as any).style.fontWeight ='500';
       }
     }
 
-    if (args.elementType === 'resourceGroupCells' && args.groupIndex==this.groupIndex) {
+    if (args.elementType === 'resourceGroupCells' && this.groupIndex.includes(args.groupIndex)) {
       (args.element as any).style.borderTop = '1px solid #737373';
     }
 
