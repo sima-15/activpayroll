@@ -32,6 +32,7 @@ import { UserViewComponent } from './user-view/user-view.component';
 import { SyncfusionSchedulerComponent } from './syncfusion-scheduler/syncfusion-scheduler.component';
 import { AgendaService, DayService, MonthAgendaService, MonthService, ScheduleModule, WeekService, WorkWeekService } from '@syncfusion/ej2-angular-schedule';
 import { TimePickerModule } from '@syncfusion/ej2-angular-calendars';
+import { CalendarKanbanViewComponent } from './calendar-kanban-view/calendar-kanban-view.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { TimePickerModule } from '@syncfusion/ej2-angular-calendars';
     PayrollPulseDialogboxComponent,
     SelectCheckAllComponent,
     UserViewComponent,
-    SyncfusionSchedulerComponent
+    SyncfusionSchedulerComponent,
+    CalendarKanbanViewComponent
   ],
   imports: [
     BrowserModule,

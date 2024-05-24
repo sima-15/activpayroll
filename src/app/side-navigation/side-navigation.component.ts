@@ -26,7 +26,8 @@ export class SidenavComponent {
     {  link: "authform", name: "Auth Form", icon: "credit-card"},
     {  link: "payroll_upcoming", name: "Kanban View", icon: "clipboard-list"},
     { link: "scheduler", name: "Kendo Scheduler", icon: "document-duplicate" },        
-    {  link: "syncscheduler", name: "Syncfusion Scheduler", icon: "document-duplicate"}
+    {  link: "syncscheduler", name: "Syncfusion Scheduler", icon: "document-duplicate"},
+    {  link: "kanban", name: "calendar-kaban", icon: "document-duplicate"}
     // {  link: "syncscheduler", name: "Settings", icon: "document-duplicate"}
   ];
 

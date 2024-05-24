@@ -1,0 +1,21 @@
+<ejs-schedule width='100%' height='550px'  [eventSettings]="eventSettings">
+    <ng-template #cellHeaderTemplate let-data>
+        <div class="date-flex">
+            <div class="date-text">{{getDateHeaderDay(data.date).toUpperCase()}}</div>
+            <div class="date-text d-flex">
+                <div class="pr-1">{{getDateHeaderMonth(data.date).toUpperCase()}}</div>
+                <div>{{getDateHeaderDate(data.date)}}</div>                
+            </div>
+        </div>
+        
+    </ng-template>
+    <e-views>
+      <e-view option='Month' [displayDate]="displayDate" [showWeekend]="showWeekend" [readonly]="isReadOnly" [numberOfWeeks]=5></e-view>
+    </e-views>
+    <ng-template #eventSettingsTemplate let-data>
+        <div class='template-wrap' [style.background]="data.CategoryColor">
+            <div class="subject" [style.background]="data.CategoryColor">{{data.Subject}}</div>
+            <!-- <div class="time" [style.background]="data.CategoryColor">Time: {{getTimeString(data.StartTime)}} - {{getTimeString(data.EndTime)}}</div> -->
+        </div>
+    </ng-template>
+  </ejs-schedule>

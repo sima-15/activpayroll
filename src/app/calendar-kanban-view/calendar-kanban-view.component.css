@@ -1,0 +1,29 @@
+.e-date-header-container{
+    display: none !important;
+}
+.e-schedule .e-month-view .e-date-header{
+    width: 95% !important;
+}
+.date-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.template-wrap{
+    width: -webkit-fill-available !important;
+}
+.e-schedule .e-month-view .e-work-cells, .e-schedule .e-month-agenda-view .e-work-cells{
+    padding: 6px !important;
+}
+.e-schedule .e-month-view .e-current-date .e-date-header, .e-schedule .e-month-agenda-view .e-current-date .e-date-header{
+    background-color: unset !important;
+    color: blue !important;
+}
+.e-current-date{
+    background-color: #adc1e63d !important;
+}
+.e-schedule .e-schedule-toolbar .e-toolbar-items.e-tbar-pos{
+    display: none !important;
+}
+.e-toolbar.e-control[class*=e-toolbar]{
+    display: none !important;
+}
