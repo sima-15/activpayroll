@@ -39,14 +39,12 @@
   border-radius: 20px !important;
   pointer-events: none;
   text-wrap: balance;
-  font-weight: 200;
   height: 30px;
-  margin-top: 13px
 }
 
 :host ::ng-deep .e-schedule .e-timeline-view .e-work-cells,
 :host ::ng-deep .e-schedule .e-timeline-view .e-resource-cells{
-  max-width: 54px !important;
+  height: 35px !important;
 }
 
 :host ::ng-deep.e-appointment-details .e-time {
@@ -84,6 +82,10 @@
 }
 
 :host ::ng-deep .e-schedule .e-timeline-view .e-date-header-wrap table tbody td, .e-schedule .e-timeline-month-view .e-date-header-wrap table tbody td {
-  padding: 6px;
   text-align: center;
+}
+
+:host ::ng-deep.e-schedule .e-timeline-view .e-appointment .e-subject{
+  font-size: 10px;
+  font-weight: 500;
 }
