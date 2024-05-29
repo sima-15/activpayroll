@@ -205,5 +205,5 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
         (args.element).appendChild(ele);
       }
     }
-  
+
 }

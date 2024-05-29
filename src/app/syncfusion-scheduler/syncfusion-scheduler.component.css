@@ -61,7 +61,7 @@
 
 .date-text {
   font-weight: 500;
-  font-size: 11px;
+  font-size: 13px;
   text-wrap: balance;
 }
 
@@ -89,3 +89,8 @@
   font-size: 10px;
   font-weight: 500;
 }
+
+:host ::ng-deep .schedule-cell-dimension.e-schedule .e-timeline-view .e-date-header-wrap table col,  
+:host ::ng-deep .schedule-cell-dimension.e-schedule .e-timeline-view .e-content-wrap table col { 
+    width: 68.69px; 
+} 
