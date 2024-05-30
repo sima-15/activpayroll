@@ -28,10 +28,8 @@ import { SelectCheckAllComponent } from './shared/filter/select-check-all.compon
 import { GenericTableComponent } from './shared/generic-table/generic-table.component';
 import { SidenavComponent } from './side-navigation/side-navigation.component';
 import { UserViewComponent } from './user-view/user-view.component';
-
-import { TimePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { AgendaService, DayService, MonthAgendaService, MonthService, ScheduleModule, WeekService, WorkWeekService } from '@syncfusion/ej2-angular-schedule';
-import { SyncfusionSchedulerComponent } from './syncfusion-scheduler/syncfusion-scheduler.component';
+import { TimePickerModule } from '@syncfusion/ej2-angular-calendars';
 
 
 @NgModule({
@@ -53,7 +51,8 @@ import { SyncfusionSchedulerComponent } from './syncfusion-scheduler/syncfusion-
     PayrollPulseDialogboxComponent,
     SelectCheckAllComponent,
     UserViewComponent,
-    SyncfusionSchedulerComponent
+    SyncfusionSchedulerComponent,
+    CalendarKanbanViewComponent
   ],
   imports: [
     BrowserModule,
