@@ -39,12 +39,12 @@
   border-radius: 20px !important;
   pointer-events: none;
   text-wrap: balance;
-  height: 30px;
+  height: 19px;
 }
 
 :host ::ng-deep .e-schedule .e-timeline-view .e-work-cells,
 :host ::ng-deep .e-schedule .e-timeline-view .e-resource-cells{
-  height: 35px !important;
+  height: 42px !important;
 }
 
 :host ::ng-deep.e-appointment-details .e-time {

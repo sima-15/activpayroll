@@ -3,17 +3,17 @@ export let resourceData: Object[] = [
     {
         Id: 1,
         Subject: 'Review',
-        StartTime: new Date(2024, 4, 1, 0, 0),
-        EndTime: new Date(2024, 4, 1, 0, 0),
+        StartTime: new Date(2024, 4, 31, 0, 0),
+        EndTime: new Date(2024, 4, 31, 0, 0),
         IsAllDay: false,
-        CountryId: 1,
-        PayrollId: 2,
-        CategoryColor: "#7fa900"
+        CountryId: 2,
+        PayrollId: 3,
+        CompanyId:1
     }, {
         Id: 2,
         Subject: 'process',
-        StartTime: new Date(2024, 4, 1, 0, 0),
-        EndTime: new Date(2024, 4, 1, 0, 0),
+        StartTime: new Date(2024, 4, 31, 0, 0),
+        EndTime: new Date(2024, 4, 31, 0, 0),
         IsAllDay: false,
         CountryId: 2,
         PayrollId: 3,
