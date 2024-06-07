@@ -13,9 +13,45 @@
       <e-view option='Month' [displayDate]="displayDate" [showWeekend]="showWeekend" [readonly]="isReadOnly" [numberOfWeeks]=5></e-view>
     </e-views>
     <ng-template #eventSettingsTemplate let-data>
-        <div class='template-wrap' [style.background]="data.CategoryColor">
-            <div class="subject" [style.background]="data.CategoryColor">{{data.Subject}}</div>
-            <!-- <div class="time" [style.background]="data.CategoryColor">Time: {{getTimeString(data.StartTime)}} - {{getTimeString(data.EndTime)}}</div> -->
+        <div class='template-wrap' [style.background]="data.CategoryColor" (click)="abc()">
+            <div class="subject" [style.background]="data.CategoryColor"><img
+                src="assets/image/GB.png"
+              /> {{data.Subject}}
+                </div>
+            <div class="image">
+                
+              </div>
         </div>
     </ng-template>
   </ejs-schedule>
+
+  <!-- Uncomment below lines to reproduce the chnages -->
+
+  <!-- <ejs-schedule #scheduleObj cssClass='schedule-group-custom-work-days' width='100%' height='850px'
+    [currentView]="currentView" [group]="group" [timeScale]="timeScale" [selectedDate]="selectedDate"
+    (renderCell)="onRenderCell($event)" [eventSettings]="eventSettings" [allowResizing]="allowResizing"
+    [allowDragAndDrop]="allowDragDrop">
+    <ng-template #timeScaleMajorSlotTemplate let-data>
+      <div class="majorTime">{{getMajorTime(data.date)}}</div>
+    </ng-template>
+    <ng-template #timeScaleMinorSlotTemplate let-data>
+      <div class="minorTime">{{getMinorTime(data.date)}}</div>
+    </ng-template>
+    <ng-template #resourceHeaderTemplate let-data>
+      <div class='template-wrap'>
+        <div class="resource-image {{getDoctorImage(data)}}"></div>
+        <div class="resource-details">
+          <div class="resource-name">{{getDoctorName(data)}}</div>
+          <div class="resource-designation">{{getDoctorLevel(data)}}</div>
+        </div>
+      </div>
+    </ng-template>
+    <e-views>
+      <e-view option="Day"></e-view>
+    </e-views>
+    <e-resources>
+      <e-resource field='DoctorId' title='Doctor Name' name='Doctors' [dataSource]='resourceDataSource' textField='text'
+        idField='id' colorField='color' workDaysField='workDays' startHourField='startHour' endHourField='endHour'>
+      </e-resource>
+    </e-resources>
+  </ejs-schedule> -->
