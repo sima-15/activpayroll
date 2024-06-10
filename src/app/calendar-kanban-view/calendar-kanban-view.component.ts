@@ -87,53 +87,53 @@ export class CalendarKanbanViewComponent {
 
 }
 
-export let fifaEventsData: Object[] = [
-    {
-        Id: 1,
-        Subject: 'RUSSIA vs SAUDI ARABIA',
-        Description: 'Group A',
-        StartTime: new Date(2024, 4, 11, 9, 30),
-        EndTime: new Date(2024, 4, 11, 11, 0),
-        StartTimezone: 'Europe/Moscow',
-        EndTimezone: 'Europe/Moscow',
-        City: 'Moscow',
-        CategoryColor: '#1aaa55',
-        GroupId: 1
-    }, {
-        Id: 2,
-        Subject: 'EGYPT vs URUGUAY',
-        Description: 'Group A',
-        StartTime: new Date(2024, 5, 15, 12, 0),
-        EndTime: new Date(2024, 5, 15, 14, 0),
-        StartTimezone: 'Asia/Yekaterinburg',
-        EndTimezone: 'Asia/Yekaterinburg',
-        City: 'Ekaterinburg',
-        CategoryColor: '#1aaa55',
-        GroupId: 1
-    }, {
-        Id: 3,
-        Subject: 'MOROCCO vs IR IRAN',
-        Description: 'Group B',
-        StartTime: new Date(2024, 5, 15, 15, 0),
-        EndTime: new Date(2024, 5, 15, 17, 0),
-        StartTimezone: 'Europe/Moscow',
-        EndTimezone: 'Europe/Moscow',
-        City: 'Saint Petersburg',
-        CategoryColor: '#357cd2',
-        GroupId: 2
-    }, {
-        Id: 4,
-        Subject: 'PORTUGAL vs SPAIN',
-        Description: 'Group B',
-        StartTime: new Date(2024, 5, 15, 18, 0),
-        EndTime: new Date(2024, 5, 15, 20, 0),
-        StartTimezone: 'Europe/Moscow',
-        EndTimezone: 'Europe/Moscow',
-        City: 'Sochi',
-        CategoryColor: '#357cd2',
-        GroupId: 2
-    },
-];
+// export let fifaEventsData: Object[] = [
+//     {
+//         Id: 1,
+//         Subject: 'RUSSIA vs SAUDI ARABIA',
+//         Description: 'Group A',
+//         StartTime: new Date(2024, 4, 11, 9, 30),
+//         EndTime: new Date(2024, 4, 11, 11, 0),
+//         StartTimezone: 'Europe/Moscow',
+//         EndTimezone: 'Europe/Moscow',
+//         City: 'Moscow',
+//         CategoryColor: '#1aaa55',
+//         GroupId: 1
+//     }, {
+//         Id: 2,
+//         Subject: 'EGYPT vs URUGUAY',
+//         Description: 'Group A',
+//         StartTime: new Date(2024, 5, 15, 12, 0),
+//         EndTime: new Date(2024, 5, 15, 14, 0),
+//         StartTimezone: 'Asia/Yekaterinburg',
+//         EndTimezone: 'Asia/Yekaterinburg',
+//         City: 'Ekaterinburg',
+//         CategoryColor: '#1aaa55',
+//         GroupId: 1
+//     }, {
+//         Id: 3,
+//         Subject: 'MOROCCO vs IR IRAN',
+//         Description: 'Group B',
+//         StartTime: new Date(2024, 5, 15, 15, 0),
+//         EndTime: new Date(2024, 5, 15, 17, 0),
+//         StartTimezone: 'Europe/Moscow',
+//         EndTimezone: 'Europe/Moscow',
+//         City: 'Saint Petersburg',
+//         CategoryColor: '#357cd2',
+//         GroupId: 2
+//     }, {
+//         Id: 4,
+//         Subject: 'PORTUGAL vs SPAIN',
+//         Description: 'Group B',
+//         StartTime: new Date(2024, 5, 15, 18, 0),
+//         EndTime: new Date(2024, 5, 15, 20, 0),
+//         StartTimezone: 'Europe/Moscow',
+//         EndTimezone: 'Europe/Moscow',
+//         City: 'Sochi',
+//         CategoryColor: '#357cd2',
+//         GroupId: 2
+//     },
+// ];
 
 export let scheduleData: Object[] = [
     {
@@ -182,77 +182,77 @@ export let scheduleData: Object[] = [
     },
 ];
 
-export let timeZoneData: Object[] = [
-    {
-        Id: 1,
-        Subject: "Explosion of Betelgeuse Star",
-        StartTime: "2024-03-11T14:00:00.000Z",
-        EndTime: "2024-03-11T15:30:00.000Z",
-        CategoryColor: "#29a642"
-    }, {
-        Id: 2,
-        Subject: "Thule Air Crash Report",
-        StartTime: "2024-03-12T16:30:00.000Z",
-        EndTime: "2024-03-12T18:30:00.000Z",
-        CategoryColor: "#357cd2"
-    }, {
-        Id: 3,
-        Subject: "Blue Moon Eclipse",
-        StartTime: "2024-03-13T14:00:00.000Z",
-        EndTime: "2024-03-13T15:30:00.000Z",
-        CategoryColor: "#7fa900"
-    },
-];
+// export let timeZoneData: Object[] = [
+//     {
+//         Id: 1,
+//         Subject: "Explosion of Betelgeuse Star",
+//         StartTime: "2024-03-11T14:00:00.000Z",
+//         EndTime: "2024-03-11T15:30:00.000Z",
+//         CategoryColor: "#29a642"
+//     }, {
+//         Id: 2,
+//         Subject: "Thule Air Crash Report",
+//         StartTime: "2024-03-12T16:30:00.000Z",
+//         EndTime: "2024-03-12T18:30:00.000Z",
+//         CategoryColor: "#357cd2"
+//     }, {
+//         Id: 3,
+//         Subject: "Blue Moon Eclipse",
+//         StartTime: "2024-03-13T14:00:00.000Z",
+//         EndTime: "2024-03-13T15:30:00.000Z",
+//         CategoryColor: "#7fa900"
+//     },
+// ];
 
-export let resourceData: Object[] = [
-    {
-        Id: 1,
-        Subject: 'Workflow Analysis',
-        StartTime: new Date(2024, 4, 11, 9, 30),
-        EndTime: new Date(2024, 4, 11, 11, 0),
-        IsAllDay: false,
-        OwnerId: 1,
-        RoomId: 1
-    }, {
-        Id: 2,
-        Subject: 'Requirement planning',
-        StartTime: new Date(2024, 4, 1, 12, 30),
-        EndTime: new Date(2024, 4, 1, 14, 45),
-        IsAllDay: false,
-        OwnerId: 2,
-        RoomId: 2
-    }, {
-        Id: 3,
-        Subject: 'Quality Analysis',
-        StartTime: new Date(2024, 4, 2, 10, 0),
-        EndTime: new Date(2024, 4, 2, 12, 30),
-        IsAllDay: false,
-        OwnerId: 1,
-        RoomId: 1
-    },
-];
+// export let resourceData: Object[] = [
+//     {
+//         Id: 1,
+//         Subject: 'Workflow Analysis',
+//         StartTime: new Date(2024, 4, 11, 9, 30),
+//         EndTime: new Date(2024, 4, 11, 11, 0),
+//         IsAllDay: false,
+//         OwnerId: 1,
+//         RoomId: 1
+//     }, {
+//         Id: 2,
+//         Subject: 'Requirement planning',
+//         StartTime: new Date(2024, 4, 1, 12, 30),
+//         EndTime: new Date(2024, 4, 1, 14, 45),
+//         IsAllDay: false,
+//         OwnerId: 2,
+//         RoomId: 2
+//     }, {
+//         Id: 3,
+//         Subject: 'Quality Analysis',
+//         StartTime: new Date(2024, 4, 2, 10, 0),
+//         EndTime: new Date(2024, 4, 2, 12, 30),
+//         IsAllDay: false,
+//         OwnerId: 1,
+//         RoomId: 1
+//     },
+// ];
 
-export let schedulerData: Object[] = [
-    {
-        Id: 1,
-        Subject: 'Explosion of Betelgeuse Star',
-        StartTime: new Date(2024, 4, 11, 9, 30),
-        EndTime: new Date(2024, 4, 11, 11, 0),
-        CategoryColor: '#29a642'
-    }, {
-        Id: 2,
-        Subject: 'Thule Air Crash Report',
-        StartTime: new Date(2021, 7, 12, 12, 0),
-        EndTime: new Date(2021, 7, 12, 14, 0),
-        CategoryColor: '#357cd2'
-    }, {
-        Id: 3,
-        Subject: 'Blue Moon Eclipse',
-        StartTime: new Date(2021, 7, 13, 9, 30),
-        EndTime: new Date(2021, 7, 13, 11, 0),
-        CategoryColor: '#7fa900'
-    }
-];
+// export let schedulerData: Object[] = [
+//     {
+//         Id: 1,
+//         Subject: 'Explosion of Betelgeuse Star',
+//         StartTime: new Date(2024, 4, 11, 9, 30),
+//         EndTime: new Date(2024, 4, 11, 11, 0),
+//         CategoryColor: '#29a642'
+//     }, {
+//         Id: 2,
+//         Subject: 'Thule Air Crash Report',
+//         StartTime: new Date(2021, 7, 12, 12, 0),
+//         EndTime: new Date(2021, 7, 12, 14, 0),
+//         CategoryColor: '#357cd2'
+//     }, {
+//         Id: 3,
+//         Subject: 'Blue Moon Eclipse',
+//         StartTime: new Date(2021, 7, 13, 9, 30),
+//         EndTime: new Date(2021, 7, 13, 11, 0),
+//         CategoryColor: '#7fa900'
+//     }
+// ];
 
 
 export function generateObject() {
