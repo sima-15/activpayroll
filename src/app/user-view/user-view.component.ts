@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserViewComponent implements OnInit {
    
   currentUserName:string= 'Shweta Patil'
-
+  inputText = '';
   ngOnInit(): void {
   }
 

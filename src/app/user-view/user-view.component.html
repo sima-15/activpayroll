@@ -6,15 +6,14 @@
                   <ng-container *ngIf="item.personID !== currentUserName">
                       <div class="senders-message"><span>{{item.msg}}</span></div>
                       <span class="d-inline-block">
-                          <span class="sender-time"><b>{{item.personID}}</b> {{item.time | dateTimeAgo:
-                              longTexType}}</span>
+                          <span class="sender-time"><b>{{item.personID}}</b> {{item.time }}</span>
                       </span>
                   </ng-container>
                   <ng-container *ngIf="item.personID === currentUserName">
                       <div class="receivers-message"><span>{{item.msg}}</span>
                       </div>
                       <span class="d-inline-block">
-                          <span class="receiver-time"><b>You</b> {{item.time | dateTimeAgo: longTexType}}</span>
+                          <span class="receiver-time"><b>You</b> {{item.time }}</span>
                       </span>
                   </ng-container>
               </div>
