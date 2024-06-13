@@ -1,33 +1,32 @@
- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 fixed">
-  
-  <ng-container matColumnDef="userName">
-    <th mat-header-cell *matHeaderCellDef>Payrolls</th>
-    <td mat-cell *matCellDef="let user">
-      <div [ngClass]="{ 'group-cell': user.isGroupItem}">
-        <img [ngClass]="{ hideImg: !user.image}" src="{{ user.image }}" alt="{{ user.name }}" class="user-image" />
-        <span class="payroll-name">{{ user.name }} </span>
-        <img style="float: right;padding-right: 10px;" *ngIf="user.name == 'Monthly Payroll' || user.name == 'Fortnightly Payroll' || user.name == 'Weekly Payroll'" src="../assets/image/right-angle-icon.png" alt="{{ user.name }}"/>
+<div class="card m-1 p-2">
+  <div class="main-panel px-2">
+      <div class="panel">
+          <div class="chat-present">
+              <div class="chat-main-panel" *ngFor="let item of receiverData">
+                  <ng-container *ngIf="item.personID !== currentUserName">
+                      <div class="senders-message"><span>{{item.msg}}</span></div>
+                      <span class="d-inline-block">
+                          <span class="sender-time"><b>{{item.personID}}</b> {{item.time | dateTimeAgo:
+                              longTexType}}</span>
+                      </span>
+                  </ng-container>
+                  <ng-container *ngIf="item.personID === currentUserName">
+                      <div class="receivers-message"><span>{{item.msg}}</span>
+                      </div>
+                      <span class="d-inline-block">
+                          <span class="receiver-time"><b>You</b> {{item.time | dateTimeAgo: longTexType}}</span>
+                      </span>
+                  </ng-container>
+              </div>
+          </div>
+          <div class="input pt-2">
+              <textarea type="textarea" id="textArea" [(ngModel)]="inputText" class="ant-input" #text></textarea>
+              <span class="suffix">
+                  <button class="btn btn-primary" [disabled]="inputText.length==0"
+                      (click)="myMessage(text.value)"><span class="material-symbols-outlined custom-class"> send</span>
+                      send</button>
+              </span>
+          </div>
       </div>
-    </td>
-  </ng-container>
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="{{row.name}}"></tr>
- 
-  <ng-container *ngFor="let day of days; let i = index" [matColumnDef]="'day' + i">
-    <th class="day-cell" [style.background-color]=" isWeekend(day) ? '#F5F5F5' : ''"  [style.border]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-header-cell *matHeaderCellDef>{{ day }}</th>
-    <td id="cell"  [style.border-left]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" [style.border-right]="calculateRulerPosition(day) ? '2px solid skyblue' : ''" mat-cell *matCellDef="let user">
-      <ng-template [ngIf]="user.isGroupItem" [ngIfElse]="taskItem">
-        <div class="group-cell">&nbsp;</div>
-      </ng-template>
-      <ng-template #taskItem>
-        <ng-container *ngFor="let task of user.tasks;index as i">
-       <div #taskRef  class="task" [ngStyle]="{ 'background-color': task.color }" [ngClass]="getBorderRadius(task,day)" *ngIf="isTaskOnDay(task, day)" >
-        {{task.name}}
-        </div>
-      </ng-container>
-      </ng-template>
-    </td>
-  </ng-container>
-
-  
-</table>
+  </div>
+</div>

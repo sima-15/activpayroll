@@ -12,8 +12,8 @@ import {
   ScheduleComponent,
   RenderCellEventArgs,
 } from '@syncfusion/ej2-angular-schedule';
-import { Internationalization ,createElement} from '@syncfusion/ej2-base';
-import { resourceData, CLresourceData } from './datasource';
+import { Internationalization, createElement } from '@syncfusion/ej2-base';
+import { resourceData } from './datasource';
 
 @Component({
   selector: 'app-syncfusion-scheduler',
@@ -22,9 +22,7 @@ import { resourceData, CLresourceData } from './datasource';
   providers: [TimelineViewsService, ResizeService, DragAndDropService],
 })
 export class SyncfusionSchedulerComponent implements AfterViewInit {
-  ngAfterViewInit(): void {
-  }
-  isAdmin = true;
+  ngAfterViewInit(): void {}
 
   public selectedDate: Date = new Date(
     new Date().setDate(new Date().getDate() - 6)
@@ -46,13 +44,19 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
       text: 'Canada',
       name: 'Canada',
       id: 1,
-      color: '#cb6bb2',
+      //color: '#cb6bb2',
     },
     {
       text: 'Australia',
       name: 'Australia',
       id: 2,
-      color: '#cb6bb2',
+      //color: '#cb6bb2',
+    },
+    {
+      text: 'United Kingdom',
+      name: 'United Kingdom',
+      id: 3,
+      //color: '#cb6bb2',
     },
   ];
 
@@ -61,25 +65,31 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
       text: 'Production Stuff',
       name: 'Production Stuff',
       id: 1,
-      color: '#cb6bb2',
+      //color: '#cb6bb2',
       groupId: 1,
     },
     {
       text: 'Facility Management',
       name: 'Facility Management',
       id: 2,
-      color: '#df5286',
+      //color: '#df5286',
       groupId: 1,
     },
     {
       text: 'Facilities Management',
       name: 'Facilities Management',
       id: 3,
-      color: '#df5286',
+      //color: '#df5286',
       groupId: 2,
     },
+    {
+      text: 'Production',
+      name: 'Production',
+      id: 3,
+      //color: '#df5286',
+      groupId: 3,
+    },
   ];
-
 
   public PayrollsDataSource: Object[] = [
     {
@@ -87,42 +97,42 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
       name: 'Monthly Payroll',
       id: 1,
       groupId: 1,
-      color: '#A8A8FF',
+      //color: '#A8A8FF',
     },
     {
       text: 'weeklypayroll',
       name: 'Weekly Payroll',
       id: 2,
       groupId: 1,
-      color: '#66FFD0',
+      //color: '#66FFD0',
     },
     {
       text: 'monthlypayroll',
       name: 'Monthly Payroll',
       id: 3,
       groupId: 2,
-      color: '#86EFAC',
+      //color: '#86EFAC',
     },
     {
       text: 'weeklypayroll',
       name: 'Weekly Payroll',
       id: 4,
       groupId: 3,
-      color: '#FF8B5C',
+      //color: '#FF8B5C',
     },
     {
       text: 'FortnightlyPayroll',
       name: 'Fortnightly Payroll',
       id: 5,
       groupId: 3,
-      color: '#66FFD0',
+      //color: '#66FFD0',
     },
     {
       text: 'FortnightlyPayroll',
       name: 'Fortnightly Payroll',
       id: 6,
       groupId: 2,
-      color: '#66FFD0',
+      //color: '#66FFD0',
     },
   ];
   isReadOnly = true;
@@ -148,35 +158,56 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
   }
 
   oneventRendered(args: EventRenderedArgs): void {
-    let categoryColor: string = args.data['CategoryColor'] as string;
-    if (!args.element || !categoryColor) {
+    let stat: number = args.data['Status'] as number;
+    if (!args.element || !stat) {
       return;
     }
-    args.element.style.backgroundColor = categoryColor;
-    
+    if (stat == 1) {
+      args.element.style.backgroundColor = '#E5FFF7';
+      args.element.style.color = '#008059';
+      args.element.style.border = '1px solid #01FFB1';
+    } else if (stat == 2) {
+      args.element.style.backgroundColor = '#F0F0FF';
+      args.element.style.color = '#272079';
+      args.element.style.border = '1px solid #C2C2FF';
+    } else if (stat == 3) {
+      args.element.style.backgroundColor = '#FEE2E2';
+      args.element.style.color = '#991B1B';
+      args.element.style.border = '1px solid #FECACA';
+    } else if (stat == 4) {
+      args.element.style.backgroundColor = '#FAFAFA';
+      args.element.style.color = '#404040';
+      args.element.style.border = '1px solid #E5E5E5';
+    }
   }
 
   getDateHeaderText: Function = (value: Date) => {
     return this.instance.formatDate(value, { skeleton: 'MMMEd' });
   };
 
-  cary=this.CompanyDataSource.map((item:any)=>item.name);
-  conary =this.CountriesDataSource.map((item:any)=>item.name);
-  groupIndex =[];
+  cary = this.CompanyDataSource.map((item: any) => item.name);
+  conary = this.CountriesDataSource.map((item: any) => item.name);
+  groupIndex = [];
   public onRenderCell(args: RenderCellEventArgs): void {
-
-    if(args.elementType === 'resourceHeader'){
-      if( this.cary.includes(args.element.ariaLabel?.replace(' resource',''))){
+    if (args.elementType === 'resourceHeader') {
+      if (
+        this.cary.includes(args.element.ariaLabel?.replace(' resource', ''))
+      ) {
         this.groupIndex.push(args.groupIndex);
         (args.element as any).style.borderTop = '1px solid #737373';
-        (args.element as any).style.fontWeight ='700';
+        (args.element as any).style.fontWeight = '700';
       }
-      if( this.conary.includes(args.element.ariaLabel?.replace(' resource',''))){
-        (args.element as any).style.fontWeight ='500';
+      if (
+        this.conary.includes(args.element.ariaLabel?.replace(' resource', ''))
+      ) {
+        (args.element as any).style.fontWeight = '500';
       }
     }
 
-    if (args.elementType === 'resourceGroupCells' && this.groupIndex.includes(args.groupIndex)) {
+    if (
+      args.elementType === 'resourceGroupCells' &&
+      this.groupIndex.includes(args.groupIndex)
+    ) {
       (args.element as any).style.borderTop = '1px solid #737373';
     }
 
@@ -196,14 +227,16 @@ export class SyncfusionSchedulerComponent implements AfterViewInit {
         (args.element as any).style.borderLeft = '1px solid #4143E7';
         (args.element as any).style.borderRight = '1px solid #4143E7';
       }
-    }
-    if (args.elementType == 'emptyCells') {
-        let ele: HTMLElement = createElement('div', {
-          innerHTML: "<b>Payrolls</b>",
-          styles:'padding-left:15px'
-        });
-        (args.element).appendChild(ele);
+      if (args.date && (args.date.getDay() === 6 || args.date.getDay() === 0)) {
+        (args.element as any).style.backgroundColor = '#FFFFFF';
       }
     }
-
+    if (args.elementType == 'emptyCells') {
+      let ele: HTMLElement = createElement('div', {
+        innerHTML: '<b>Payrolls</b>',
+        styles: 'padding-left:15px',
+      });
+      args.element.appendChild(ele);
+    }
+  }
 }

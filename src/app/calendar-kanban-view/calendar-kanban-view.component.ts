@@ -100,7 +100,27 @@ export let scheduleData: Object[] = [
         StartTime: new Date(2024, 4, 12, 9, 30),
         EndTime: new Date(2024, 4, 12, 11, 0),
         CategoryColor: '#7fa900'
-    }, {
+    }, 
+    {
+        Id: 3,
+        Subject: 'Blue Moon Eclipse',
+        StartTime: new Date(2024, 4, 12, 9, 30),
+        EndTime: new Date(2024, 4, 12, 11, 0),
+        CategoryColor: '#7fa900'
+    },
+    {
+        Id: 3,
+        Subject: 'Blue Moon ',
+        StartTime: new Date(2024, 4, 12, 9, 30),
+        EndTime: new Date(2024, 4, 12, 11, 0),
+        CategoryColor: '#7fa900'
+    },{
+        Id: 3,
+        Subject: 'Blue  Eclipse',
+        StartTime: new Date(2024, 4, 12, 9, 30),
+        EndTime: new Date(2024, 4, 12, 11, 0),
+        CategoryColor: '#7fa900'
+    },{
         Id: 4,
         Subject: 'Meteor Showers in 2024',
         StartTime: new Date(2024, 4, 14, 13, 0),

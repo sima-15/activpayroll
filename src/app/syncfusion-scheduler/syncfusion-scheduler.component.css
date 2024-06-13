@@ -39,12 +39,12 @@
   border-radius: 20px !important;
   pointer-events: none;
   text-wrap: balance;
-  height: 19px;
+  height: 23px;
 }
 
 :host ::ng-deep .e-schedule .e-timeline-view .e-work-cells,
 :host ::ng-deep .e-schedule .e-timeline-view .e-resource-cells{
-  height: 42px !important;
+  height: 25px !important;
 }
 
 :host ::ng-deep.e-appointment-details .e-time {
@@ -93,4 +93,8 @@
 :host ::ng-deep .schedule-cell-dimension.e-schedule .e-timeline-view .e-date-header-wrap table col,  
 :host ::ng-deep .schedule-cell-dimension.e-schedule .e-timeline-view .e-content-wrap table col { 
     width: 68.69px; 
-} 
+}
+
+:host ::ng-deep .e-schedule .e-timeline-view .e-appointment .e-left-icon{
+  line-height: 20px;
+}
