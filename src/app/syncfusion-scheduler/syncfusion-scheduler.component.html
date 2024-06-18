@@ -20,7 +20,16 @@
 			<ng-template #resourceHeaderTemplate let-data>
 				<div class='company-wrap'>
 					<div class="{{getCountryImage(data)}}"></div>
-					<div class="company-name">{{data.resourceData.name}}</div>
+					<div class="Payroll-name">
+            <div>
+              <div class="warning-image"  *ngIf="!data.resourceData.IsoCode || !data.resourceData.critical"></div>
+              <img class="country-image" src="../../assets/image/GB.png"  *ngIf="data.resourceData.IsoCode"/>
+              <img class="warning-image" src="../../assets/image/warning-red-icon.png" *ngIf="data.resourceData.critical"/>
+            </div>
+            <div>
+              {{data.resourceData.name}}
+            </div>
+          </div>
 				</div>
 			</ng-template>
 			<e-views>

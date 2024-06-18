@@ -39,7 +39,7 @@
   border-radius: 20px !important;
   pointer-events: none;
   text-wrap: balance;
-  height: 19px;
+  /* height: 19px; */
 }
 
 :host ::ng-deep .e-schedule .e-timeline-view .e-work-cells,
@@ -90,7 +90,46 @@
   font-weight: 500;
 }
 
-:host ::ng-deep .schedule-cell-dimension.e-schedule .e-timeline-view .e-date-header-wrap table col,  
-:host ::ng-deep .schedule-cell-dimension.e-schedule .e-timeline-view .e-content-wrap table col { 
-    width: 68.69px; 
-} 
+:host ::ng-deep .schedule-cell-dimension.e-schedule .e-timeline-view .e-date-header-wrap table col,
+:host ::ng-deep .schedule-cell-dimension.e-schedule .e-timeline-view .e-content-wrap table col {
+    width: 68.69px;
+}
+
+.Payroll-name{
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+}
+
+.country-image{
+  width: 1rem;
+  height: 1rem;
+}
+
+.warning-image{
+  width: 1rem;
+}
+:host ::ng-deep.completed {
+  background-color: #E5FFF7 !important;
+  border: 1px solid #01FFB1 !important;
+  color: #008059 !important;
+  font-weight: bold;
+}
+:host ::ng-deep.In-progress {
+  background-color: #F0F0FF !important;
+  border: 1px solid #C2C2FF !important;
+  color: #272079 !important;
+  font-weight: bold;
+}
+:host ::ng-deep.In-progress-overdue {
+  background-color: #FEE2E2 !important;
+  border: 1px solid #FECACA !important;
+  color: #991B1B !important;
+  font-weight: bold;
+}
+:host ::ng-deep.upcoming {
+  background-color: #fafafa !important;
+  border: 1px solid #ebebeb !important;
+  color: black !important;
+  font-weight: bold;
+}
